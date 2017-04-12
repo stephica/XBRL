@@ -1,0 +1,17 @@
+@name("DNB_Triangle_check: C1008")
+@description("DNB_Triangle_check: C1008")
+raise DNBTriangleCheckC1008 severity warning
+($DPM_ID_10849 + $DPM_ID_10974 > 0) and (not ( $DPM_ID_76332 + $DPM_ID_114997 + $DPM_ID_115001 + $DPM_ID_114996 > 0)) and ( not ($DPM_ID_10849 + $DPM_ID_10974 == 0))
+message "DNB_Triangle_check. Formula used: if({f 01.01, r150,c010} + {f 01.01, r110,c010} > 0; {c 07.00.a, r070, c010, s016} + {c 10.01, r020, c020} + {c 10.01, r050, c020} + {c 10.01, r100, c020} > 0; false)"
+
+@name("DNB_Consistency_check: DNB_0053_1")
+@description("DNB_Consistency_check: DNB_0053")
+raise DNBConsistencyCheckDNB0053_1 severity error
+not ($DPM_ID_24553 + $DPM_ID_24555 + $DPM_ID_24549 == ($DPM_ID_49844 + $DPM_ID_49826 + $DPM_ID_49828 + $DPM_ID_49830 + $DPM_ID_49832 + $DPM_ID_49834 + $DPM_ID_49836 + $DPM_ID_49838 + $DPM_ID_49840 + $DPM_ID_49842 + $DPM_ID_49846 + $DPM_ID_49848 + $DPM_ID_49850 + $DPM_ID_49854 + $DPM_ID_108837 + $DPM_ID_49856 + $DPM_ID_49860 + $DPM_ID_49862 + $DPM_ID_49864 + $DPM_ID_49866 + $DPM_ID_49868 + $DPM_ID_49870 + $DPM_ID_49872 + $DPM_ID_49874 + $DPM_ID_49876 + $DPM_ID_49878 + $DPM_ID_49880 + $DPM_ID_109177 + $DPM_ID_109179 + $DPM_ID_109181 + $DPM_ID_109183 + $DPM_ID_109185 + $DPM_ID_109187 + $DPM_ID_49858 + $DPM_ID_116635))
+message "DNB_Consistency_check. Formula used: {r100} + {r110} + {r120} = SUM(r130-r480)"
+
+@name("DNB_Consistency_check: DNB_0053_2")
+@description("DNB_Consistency_check: DNB_0053")
+raise DNBConsistencyCheckDNB0053_2 severity error
+not ($DPM_ID_24554 + $DPM_ID_24556 + $DPM_ID_24550 == ($DPM_ID_49845 + $DPM_ID_49827 + $DPM_ID_49829 + $DPM_ID_49831 + $DPM_ID_49833 + $DPM_ID_49835 + $DPM_ID_49837 + $DPM_ID_49839 + $DPM_ID_49841 + $DPM_ID_49843 + $DPM_ID_49847 + $DPM_ID_49849 + $DPM_ID_49851 + $DPM_ID_49855 + $DPM_ID_108838 + $DPM_ID_49857 + $DPM_ID_49861 + $DPM_ID_49863 + $DPM_ID_49865 + $DPM_ID_49867 + $DPM_ID_49869 + $DPM_ID_49871 + $DPM_ID_49873 + $DPM_ID_49875 + $DPM_ID_49877 + $DPM_ID_49879 + $DPM_ID_49881 + $DPM_ID_109178 + $DPM_ID_109180 + $DPM_ID_109182 + $DPM_ID_109184 + $DPM_ID_109186 + $DPM_ID_109188 + $DPM_ID_49859 + $DPM_ID_116636))
+message "DNB_Consistency_check. Formula used: {r100} + {r110} + {r120} = SUM(r130-r480)"

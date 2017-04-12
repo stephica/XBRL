@@ -1,0 +1,71 @@
+@name("DNB Consistency Plausibility check: DNB_0060")
+@description("DNB Consistency Plausibility check: DNB_0060")
+raise DNBConsistencyPlausibilityCheckDNB0060 severity error
+not (((DPM_ID_85571()) - (DPM_ID_88489() + DPM_ID_88499() + DPM_ID_88497() + DPM_ID_88495() + DPM_ID_88493() + DPM_ID_88491() + DPM_ID_88507() + DPM_ID_88503() + DPM_ID_85558() + DPM_ID_85555() + DPM_ID_85567() + DPM_ID_85556() + DPM_ID_85561() + DPM_ID_85557() + DPM_ID_85554() + DPM_ID_85568))::abs < 1000)
+message "DNB check DNB_0060 failed. Formula used: {r170} = {r010} + {r020} + {r030} + {r040} + {r050} + {r060} + {r070} + {r080} + {r090} + {r100} + {r110} + {r120} + {r130} + {r140} + {r150} + {r160}"
+
+@name("DNB Consistency Plausibility check: DNB_0061")
+@description("DNB Consistency Plausibility check: DNB_0061")
+raise DNBConsistencyPlausibilityCheckDNB0061 severity error
+not (((DPM_ID_85493()) - (DPM_ID_85824() + DPM_ID_85839() + DPM_ID_85836() + DPM_ID_85833() + DPM_ID_85830() + DPM_ID_85827() + DPM_ID_85851() + DPM_ID_85845() + DPM_ID_85468() + DPM_ID_110908() + DPM_ID_85486() + DPM_ID_85464() + DPM_ID_85474() + DPM_ID_85466() + DPM_ID_85462() + DPM_ID_85488))::abs < 1000)
+message "DNB check DNB_0061 failed. Formula used: {r170} = {r010} + {r020} + {r030} + {r040} + {r050} + {r060} + {r070} + {r080} + {r090} + {r100} + {r110} + {r120} + {r130} + {r140} + {r150} + {r160}"
+
+@name("DNB Consistency Plausibility check: DNB_0062")
+@description("DNB Consistency Plausibility check: DNB_0062")
+raise DNBConsistencyPlausibilityCheckDNB0062 severity error
+not (((DPM_ID_85513()) - (DPM_ID_87188() + DPM_ID_87193() + DPM_ID_87192() + DPM_ID_87191() + DPM_ID_87190() + DPM_ID_87189() + DPM_ID_87197() + DPM_ID_87195() + DPM_ID_85501() + DPM_ID_85498() + DPM_ID_85510() + DPM_ID_85499() + DPM_ID_85504() + DPM_ID_85500() + DPM_ID_85497() + DPM_ID_85511))::abs < 1000)
+message "DNB check DNB_0062 failed. Formula used: {r170} = {r010} + {r020} + {r030} + {r040} + {r050} + {r060} + {r070} + {r080} + {r090} + {r100} + {r110} + {r120} + {r130} + {r140} + {r150} + {r160}"
+
+@name("DNB Consistency Plausibility check: DNB_0063")
+@description("DNB Consistency Plausibility check: DNB_0063")
+raise DNBConsistencyPlausibilityCheckDNB0063 severity error
+not (((DPM_ID_85590()) - (DPM_ID_89004() + DPM_ID_89009() + DPM_ID_89008() + DPM_ID_89007() + DPM_ID_89006() + DPM_ID_89005() + DPM_ID_89013() + DPM_ID_89011() + DPM_ID_85578() + DPM_ID_108836() + DPM_ID_85587() + DPM_ID_85576() + DPM_ID_85581() + DPM_ID_85577() + DPM_ID_85575() + DPM_ID_85588))::abs < 1000)
+message "DNB check DNB_0063 failed. Formula used: {r170} = {r010} + {r020} + {r030} + {r040} + {r050} + {r060} + {r070} + {r080} + {r090} + {r100} + {r110} + {r120} + {r130} + {r140} + {r150} + {r160}"
+
+@name("DNB Consistency Plausibility check: DNB_0067")
+@description("DNB Consistency Plausibility check: DNB_0067")
+raise DNBConsistencyPlausibilityCheckDNB0067 severity error
+not (((DPM_ID_85555()) - (DPM_ID_85570()))::abs < 1000)
+message "DNB check DNB_0067 failed. Formula used: {c 09.01.a, r100, c010} = {c 09.01.b, r170, c020}"
+
+@name("DNB Consistency Plausibility check: DNB_0110_1")
+@description("DNB Consistency Plausibility check: DNB_0110")
+raise DNBConsistencyPlausibilityCheckDNB0110_1 severity error
+not (((DPM_ID_85571()) - (DPM_ID_88489() + DPM_ID_88499() + DPM_ID_88497() + DPM_ID_88495() + DPM_ID_88493() + DPM_ID_88491() + DPM_ID_88507() + DPM_ID_88503() + DPM_ID_85558() + DPM_ID_85555() + DPM_ID_85567() + DPM_ID_85556() + DPM_ID_85561() + DPM_ID_85557() + DPM_ID_85554() + DPM_ID_85568))::abs < 1000)
+message "DNB check DNB_0110 failed. Formula used: {r170} = {r010} + {r020} + {r030} + {r040} + {r050} + {r060} + {r070} + {r080} + {r090} + {r100} + {r110} + {r120} + {r130} + {r140} + {r150} + {r160}"
+
+@name("DNB Consistency Plausibility check: DNB_0110_2")
+@description("DNB Consistency Plausibility check: DNB_0110")
+raise DNBConsistencyPlausibilityCheckDNB0110_2 severity error
+not (((DPM_ID_85492()) - (DPM_ID_85823() + DPM_ID_85838() + DPM_ID_85835() + DPM_ID_85832() + DPM_ID_85829() + DPM_ID_85826() + DPM_ID_85850() + DPM_ID_85844() + DPM_ID_85467() + DPM_ID_110907() + DPM_ID_85485() + DPM_ID_85463() + DPM_ID_85473() + DPM_ID_85465() + DPM_ID_85461() + DPM_ID_85487))::abs < 1000)
+message "DNB check DNB_0110 failed. Formula used: {r170} = {r010} + {r020} + {r030} + {r040} + {r050} + {r060} + {r070} + {r080} + {r090} + {r100} + {r110} + {r120} + {r130} + {r140} + {r150} + {r160}"
+
+@name("DNB Consistency Plausibility check: DNB_0110_3")
+@description("DNB Consistency Plausibility check: DNB_0110")
+raise DNBConsistencyPlausibilityCheckDNB0110_3 severity error
+not (((DPM_ID_85493()) - (DPM_ID_85824() + DPM_ID_85839() + DPM_ID_85836() + DPM_ID_85833() + DPM_ID_85830() + DPM_ID_85827() + DPM_ID_85851() + DPM_ID_85845() + DPM_ID_85468() + DPM_ID_110908() + DPM_ID_85486() + DPM_ID_85464() + DPM_ID_85474() + DPM_ID_85466() + DPM_ID_85462() + DPM_ID_85488))::abs < 1000)
+message "DNB check DNB_0110 failed. Formula used: {r170} = {r010} + {r020} + {r030} + {r040} + {r050} + {r060} + {r070} + {r080} + {r090} + {r100} + {r110} + {r120} + {r130} + {r140} + {r150} + {r160}"
+
+@name("DNB Consistency Plausibility check: DNB_0110_4")
+@description("DNB Consistency Plausibility check: DNB_0110")
+raise DNBConsistencyPlausibilityCheckDNB0110_4 severity error
+not (((DPM_ID_85436()) - (DPM_ID_85812() + DPM_ID_85817() + DPM_ID_85816() + DPM_ID_85815() + DPM_ID_85814() + DPM_ID_85813() + DPM_ID_85821() + DPM_ID_85819() + DPM_ID_85424() + DPM_ID_110906() + DPM_ID_85433() + DPM_ID_85422() + DPM_ID_85427() + DPM_ID_85423() + DPM_ID_85421() + DPM_ID_85434))::abs < 1000)
+message "DNB check DNB_0110 failed. Formula used: {r170} = {r010} + {r020} + {r030} + {r040} + {r050} + {r060} + {r070} + {r080} + {r090} + {r100} + {r110} + {r120} + {r130} + {r140} + {r150} + {r160}"
+
+@name("DNB Consistency Plausibility check: DNB_0110_5")
+@description("DNB Consistency Plausibility check: DNB_0110")
+raise DNBConsistencyPlausibilityCheckDNB0110_5 severity error
+not (((DPM_ID_85513()) - (DPM_ID_87188() + DPM_ID_87193() + DPM_ID_87192() + DPM_ID_87191() + DPM_ID_87190() + DPM_ID_87189() + DPM_ID_87197() + DPM_ID_87195() + DPM_ID_85501() + DPM_ID_85498() + DPM_ID_85510() + DPM_ID_85499() + DPM_ID_85504() + DPM_ID_85500() + DPM_ID_85497() + DPM_ID_85511))::abs < 1000)
+message "DNB check DNB_0110 failed. Formula used: {r170} = {r010} + {r020} + {r030} + {r040} + {r050} + {r060} + {r070} + {r080} + {r090} + {r100} + {r110} + {r120} + {r130} + {r140} + {r150} + {r160}"
+
+@name("DNB Consistency Plausibility check: DNB_0110_6")
+@description("DNB Consistency Plausibility check: DNB_0110")
+raise DNBConsistencyPlausibilityCheckDNB0110_6 severity error
+not (((DPM_ID_85590()) - (DPM_ID_89004() + DPM_ID_89009() + DPM_ID_89008() + DPM_ID_89007() + DPM_ID_89006() + DPM_ID_89005() + DPM_ID_89013() + DPM_ID_89011() + DPM_ID_85578() + DPM_ID_108836() + DPM_ID_85587() + DPM_ID_85576() + DPM_ID_85581() + DPM_ID_85577() + DPM_ID_85575() + DPM_ID_85588))::abs < 1000)
+message "DNB check DNB_0110 failed. Formula used: {r170} = {r010} + {r020} + {r030} + {r040} + {r050} + {r060} + {r070} + {r080} + {r090} + {r100} + {r110} + {r120} + {r130} + {r140} + {r150} + {r160}"
+
+@name("DNB Consistency Plausibility check: DNB_0110_7")
+@description("DNB Consistency Plausibility check: DNB_0110")
+raise DNBConsistencyPlausibilityCheckDNB0110_7 severity error
+not (((DPM_ID_85597()) - (DPM_ID_132781() + DPM_ID_132786() + DPM_ID_132785() + DPM_ID_132784() + DPM_ID_132783() + DPM_ID_132782() + DPM_ID_89249() + DPM_ID_89247() + DPM_ID_85594() + DPM_ID_132788() + DPM_ID_132792() + DPM_ID_132789() + DPM_ID_132791() + DPM_ID_132790() + DPM_ID_132787() + DPM_ID_132793))::abs < 1000)
+message "DNB check DNB_0110 failed. Formula used: {r170} = {r010} + {r020} + {r030} + {r040} + {r050} + {r060} + {r070} + {r080} + {r090} + {r100} + {r110} + {r120} + {r130} + {r140} + {r150} + {r160}"

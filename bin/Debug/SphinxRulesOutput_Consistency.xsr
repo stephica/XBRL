@@ -1,0 +1,1782 @@
+@name("DNB Consistency Plausibility check: DNB_0233")
+@description("DNB Consistency Plausibility check: DNB_0233")
+raise DNBConsistencyPlausibilityCheckDNB0233 severity error
+not ((($DPM_ID_135745) - ($DPM_ID_132949 / $DPM_ID_134660 ))::abs < 1000)
+message "DNB check DNB_0233 failed. Formula used: {c 47.00, r330, c010} = {c 47.00, r310, c010} / {c 47.00, r290, c010} "
+
+@name("DNB Consistency Plausibility check: DNB_0234")
+@description("DNB Consistency Plausibility check: DNB_0234")
+raise DNBConsistencyPlausibilityCheckDNB0234 severity error
+not ((($DPM_ID_135746) - ($DPM_ID_84817 / $DPM_ID_134661 ))::abs < 1000)
+message "DNB check DNB_0234 failed. Formula used: {c 47.00, r340, c010} = { c47.00, r320, c010} / {c 47.00, r300, c010} "
+
+@name("DNB Consistency Plausibility check: DNB_AL1")
+@description("DNB Consistency Plausibility check: DNB_AL1")
+raise DNBConsistencyPlausibilityCheckDNBAL1 severity error
+not ($DPM_ID_117387 + $DPM_ID_117385 / $DPM_ID_32592 - $DPM_ID_11343 - $DPM_ID_11349 - $DPM_ID_11485 < 0.25)
+message "DNB check DNB_AL1 failed. Formula used: {c 67.00.a, r010, c060} + {c 67.00.a, r120, c060} / {f 01.02, r300, c010} - {f 01.02, r020, c010} - {f 01.02, r030, c010} - {f 01.02, r150, c010} < 0.25"
+
+@name("DNB Consistency Plausibility check: DNB_AL100")
+@description("DNB Consistency Plausibility check: DNB_AL100")
+raise DNBConsistencyPlausibilityCheckDNBAL100 severity error
+not ($DPM_ID_124165 - $DPM_ID_123731 + $DPM_ID_122863 + $DPM_ID_123297 < 300 and $DPM_ID_124165 - $DPM_ID_123731 + $DPM_ID_122863 + $DPM_ID_123297 > -300)
+message "DNB check DNB_AL100 failed. Formula used: {c 70.00.a, r010, c010} - {c 70.00.a, r020, c010} + {c 70.00.a, r030, c010} + {c 70.00.a, r040, c010} < 300 and {c 70.00.a, r010, c010} - {c 70.00.a, r020, c010} + {c 70.00.a, r030, c010} + {c 70.00.a, r040, c010} > -300"
+
+@name("DNB Consistency Plausibility check: DNB_AL4")
+@description("DNB Consistency Plausibility check: DNB_AL4")
+raise DNBConsistencyPlausibilityCheckDNBAL4 severity error
+($DPM_ID_11336 + $DPM_ID_11238 + $DPM_ID_11442)/$DPM_ID_32592 > 0.01 and $DPM_ID_117362 > 0 or ($DPM_ID_11336 + $DPM_ID_11238 + $DPM_ID_11442)/$DPM_ID_32592 < 0.01
+message "DNB check DNB_AL4 failed. Formula used: ({f 08.01.a, r390, c010} + {f 08.01.a, r390, c020} + {f 08.01.a, r390, c030})/{f 01.02, r300, c010} > 0.01 and {c 68.00.a, r170, c010} > 0 or ({f 08.01.a, r390, c010} + {f 08.01.a, r390, c020} + {f 08.01.a, r390, c030})/{f 01.02, r300, c010} < 0.01"
+
+@name("DNB Consistency Plausibility check: DNB_AL5")
+@description("DNB Consistency Plausibility check: DNB_AL5")
+raise DNBConsistencyPlausibilityCheckDNBAL5 severity error
+($DPM_ID_45973 + $DPM_ID_45839)/$DPM_ID_32592 > 0.01 and $DPM_ID_117361 > 0 or ($DPM_ID_45973 + $DPM_ID_45839)/$DPM_ID_32592 < 0.01 
+message "DNB check DNB_AL5 failed. Formula used: ({f 08.01.a, r380, c034} + {f 08.01.a, r380, c035})/{f01.02, r300, c010} > 0.01 and {c 68.00.a, r180, c010} > 0 or ({f 08.01.a, r380, c034} + {f 08.01.a, r380, c035})/{f 01.02, r300, c010} < 0.01 "
+
+@name("DNB Consistency Plausibility check: DNB_AL6")
+@description("DNB Consistency Plausibility check: DNB_AL6")
+raise DNBConsistencyPlausibilityCheckDNBAL6 severity error
+($DPM_ID_45975 + $DPM_ID_45841)/$DPM_ID_32592 > 0.01 and $DPM_ID_117362 > 0 or ($DPM_ID_45975 + $DPM_ID_45841)/$DPM_ID_32592 < 0.01
+message "DNB check DNB_AL6 failed. Formula used: ({f 08.01.a, r390, c034} + {f 08.01.a, r390, c035})/{f 01.02, r300, c010} > 0.01 and {c 68.00.a, r170, c010} > 0 or ({f 08.01.a, r390, c034} + {f 08.01.a, r390, c035})/{f 01.02, r300, c010} < 0.01"
+
+@name("DNB Consistency Plausibility check: DNB_AL7")
+@description("DNB Consistency Plausibility check: DNB_AL7")
+raise DNBConsistencyPlausibilityCheckDNBAL7 severity error
+not (($DPM_ID_117387 + $DPM_ID_117385) / ($DPM_ID_32592 - $DPM_ID_45981 - $DPM_ID_45984 - $DPM_ID_11485) < 0.25)
+message "DNB check DNB_AL7 failed. Formula used: ({c 67.00.a, r010, c060} + {c 67.00.a, r120, c060}) / ({f 01.02, r300, c010} - {f 01.02, r062, c010} - {f 01.02, r063, c010} - {f 01.02, r150, c010}) < 0.25"
+
+@name("DNB Consistency Plausibility check: DNB_C200")
+@description("DNB Consistency Plausibility check: DNB_C200")
+raise DNBConsistencyPlausibilityCheckDNBC200 severity error
+not ((($DPM_ID_76792 + $DPM_ID_77425 + $DPM_ID_76795 + $DPM_ID_76793 + $DPM_ID_76771 + $DPM_ID_76794) - ($DPM_ID_76218))::abs < 1000)
+message "DNB check DNB_C200 failed. Formula used: {c 07.00.a, r070, c010, s001} + {c 07.00.a, r070, c030, s001} + {c 07.00.a, r090, c010, s001} + {c 07.00.a, r100, c010, s001} + {c 07.00.a, r120, c010, s001} + {c 07.00.a, r130, c010, s001} = {c 07.00.a, r070, c150, s001}"
+
+@name("DNB Consistency Plausibility check: DNB_C201")
+@description("DNB Consistency Plausibility check: DNB_C201")
+raise DNBConsistencyPlausibilityCheckDNBC201 severity error
+not ((($DPM_ID_76790 + $DPM_ID_77424 + $DPM_ID_76795 + $DPM_ID_76793 + $DPM_ID_76771 + $DPM_ID_76794) - ($DPM_ID_76217))::abs < 1000)
+message "DNB check DNB_C201 failed. Formula used: {c 07.00.a, r080, c010, s001} + {c 07.00.a, r080, c030, s001} + {c 07.00.a, r090, c010, s001} + {c 07.00.a, r100, c010, s001} + {c 07.00.a, r120, c010, s001} + {c 07.00.a, r130, c010, s001} = {c 07.00.a, r080, c150, s001}"
+
+@name("DNB Consistency Plausibility check: DNB_C202")
+@description("DNB Consistency Plausibility check: DNB_C202")
+raise DNBConsistencyPlausibilityCheckDNBC202 severity error
+not ((($DPM_ID_76795 + $DPM_ID_77428 + $DPM_ID_76795 + $DPM_ID_76793 + $DPM_ID_76771 + $DPM_ID_76794) - ($DPM_ID_76220))::abs < 1000)
+message "DNB check DNB_C202 failed. Formula used: {c 07.00.a, r090, c010, s001} + {c 07.00.a, r090, c030, s001} + {c 07.00.a, r090, c010, s001} + {c 07.00.a, r100, c010, s001} + {c 07.00.a, r120, c010, s001} + {c 07.00.a, r130, c010, s001} = {c 07.00.a, r090, c150, s001}"
+
+@name("DNB Consistency Plausibility check: DNB_C203")
+@description("DNB Consistency Plausibility check: DNB_C203")
+raise DNBConsistencyPlausibilityCheckDNBC203 severity error
+not ((($DPM_ID_76770 + $DPM_ID_77405 + $DPM_ID_76770 + $DPM_ID_76793 + $DPM_ID_76771 + $DPM_ID_76794) - ($DPM_ID_76198))::abs < 1000)
+message "DNB check DNB_C203 failed. Formula used: {c 07.00.a, r110, c010, s001} + {c 07.00.a, r110, c030, s001} + {c 07.00.a, r110, c010, s001} + {c 07.00.a, r100, c010, s001} + {c 07.00.a, r120, c010, s001} + {c 07.00.a, r130, c010, s001} = {c 07.00.a, r110, c150, s001}"
+
+@name("DNB Consistency Plausibility check: DNB_C204")
+@description("DNB Consistency Plausibility check: DNB_C204")
+raise DNBConsistencyPlausibilityCheckDNBC204 severity error
+not ((($DPM_ID_76794 + $DPM_ID_77427 + $DPM_ID_76794 + $DPM_ID_76793 + $DPM_ID_76771 + $DPM_ID_76794) - ($DPM_ID_76219))::abs < 1000)
+message "DNB check DNB_C204 failed. Formula used: {c 07.00.a, r130, c010, s001} + {c 07.00.a, r130, c030, s001} + {c 07.00.a, r130, c010, s001} + {c 07.00.a, r100, c010, s001} + {c 07.00.a, r120, c010, s001} + {c 07.00.a, r130, c010, s001} = {c 07.00.a, r130, c150, s001}"
+
+@name("DNB Consistency Plausibility check: DNB_C205")
+@description("DNB Consistency Plausibility check: DNB_C205")
+raise DNBConsistencyPlausibilityCheckDNBC205 severity error
+not ((($DPM_ID_74475 * 0 + $DPM_ID_74877 * 0.2 + $DPM_ID_75279 * 0.5 + $DPM_ID_75681) - ($DPM_ID_73754))::abs < 1000)
+message "DNB check DNB_C205 failed. Formula used: {c 07.00.a, r080, c160, s001} * 0 + {c 07.00.a, r080, c170, s001} * 0.2 + {c 07.00.a, r080, c180, s001} * 0.5 + {c 07.00.a, r080, c190, s001} = {c 07.00.a, r080, c200, s001}"
+
+@name("DNB Consistency Plausibility check: DNB_C241")
+@description("DNB Consistency Plausibility check: DNB_C241")
+raise DNBConsistencyPlausibilityCheckDNBC241 severity error
+not ((($DPM_ID_32679) - ($DPM_ID_32458))::abs < 1000)
+message "DNB check DNB_C241 failed. Formula used: {c 01.00, r140, c010} = {f 01.03, r190, c010}"
+
+@name("DNB Consistency Plausibility check: DNB_C242")
+@description("DNB Consistency Plausibility check: DNB_C242")
+raise DNBConsistencyPlausibilityCheckDNBC242 severity error
+not (if $DPM_ID_11110 + $DPM_ID_10976 + $DPM_ID_10851 + $DPM_ID_11345 + $DPM_ID_11247 > 0    -$DPM_ID_33342 > 0 else true)
+message "DNB check DNB_C242 failed. Formula used: if {f 01.01, r050, c010} + {f 01.01, r100, c010} + {f 01.01, r140, c010} + {f 01.02, r010, c010} + {f 01.02, r070, c010} > 0 then -{c 01.00, r290, c010} > 0"
+
+@name("DNB Consistency Plausibility check: DNB_C243")
+@description("DNB Consistency Plausibility check: DNB_C243")
+raise DNBConsistencyPlausibilityCheckDNBC243 severity error
+not (if $DPM_ID_45921 + $DPM_ID_45693 + $DPM_ID_45749 + $DPM_ID_45982 > 0    -$DPM_ID_33342 > 0 else true)
+message "DNB check DNB_C243 failed. Formula used: if {f 01.01, r091, c010} + {f 01.01, r171, c010} + {f 01.01, r175, c010} + {f 01.02, r061, c010} > 0 then -{c 01.00, r290, c010} > 0"
+
+@name("DNB Consistency Plausibility check: DNB_C244")
+@description("DNB Consistency Plausibility check: DNB_C244")
+raise DNBConsistencyPlausibilityCheckDNBC244 severity error
+not ((($DPM_ID_77423 + $DPM_ID_82307 + $DPM_ID_84485 + $DPM_ID_116562 + $DPM_ID_115099) - ($DPM_ID_10002 + $DPM_ID_112342 - 500)) >= -1000)
+message "DNB check DNB_C244 failed. Formula used: {c 07.00.a, r010, c030, s001} + {c 08.01.a, r010, c290, s001} + {c 08.01.a, r010, c290, s002} + {c 12.00, r010, c060} + {c 13.00, r010, c390} >= {f 12.00, r530, c070} + {f 12.00, r530, c090} - 500"
+
+@name("DNB Consistency Plausibility check: DNB_C245")
+@description("DNB Consistency Plausibility check: DNB_C245")
+raise DNBConsistencyPlausibilityCheckDNBC245 severity error
+not ((($DPM_ID_77423 + $DPM_ID_82307 + $DPM_ID_84485 + $DPM_ID_116562 + $DPM_ID_115099) - ($DPM_ID_10002 + $DPM_ID_112342 - 500)) >= -1000)
+message "DNB check DNB_C245 failed. Formula used: {c 07.00.a, r010, c030, s001} + {c 08.01.a, r010, c290, s001} + {c 08.01.a, r010, c290, s002} + {c 12.00, r010, c060} + {c 13.00, r010, c390} >= {f 12.00, r530, c070} + {f 12.00, r530, c090} - 500"
+
+@name("DNB Consistency Plausibility check: DNB_C246")
+@description("DNB Consistency Plausibility check: DNB_C246")
+raise DNBConsistencyPlausibilityCheckDNBC246 severity error
+not (if $DPM_ID_84995 > 0    -$DPM_ID_71286 - $DPM_ID_80209 + $DPM_ID_79651 - $DPM_ID_83359 + $DPM_ID_83009 > 0 else true)
+message "DNB check DNB_C246 failed. Formula used: if {f 09.02, r080, c010} > 0 then -{c 07.00.a, r010, c050, s001} - {c 08.01.a, r010, c040, s001} + {c 08.01.a, r010, c150, s001} - {c 08.01.a, r010, c040, s002} + {c 08.01.a, r010, c150, s002} > 0"
+
+@name("DNB Consistency Plausibility check: DNB_C247")
+@description("DNB Consistency Plausibility check: DNB_C247")
+raise DNBConsistencyPlausibilityCheckDNBC247 severity error
+not (if $DPM_ID_84995 > 0    -$DPM_ID_71286 - $DPM_ID_80209 + $DPM_ID_79651 - $DPM_ID_83359 + $DPM_ID_83009 > 0 else true)
+message "DNB check DNB_C247 failed. Formula used: if {f 09.02, r080, c010} > 0 then -{c 07.00.a, r010, c050, s001} - {c 08.01.a, r010, c040, s001} + {c 08.01.a, r010, c150, s001} - {c 08.01.a, r010, c040, s002} + {c 08.01.a, r010, c150, s002} > 0"
+
+@name("DNB Consistency Plausibility check: DNB_C248")
+@description("DNB Consistency Plausibility check: DNB_C248")
+raise DNBConsistencyPlausibilityCheckDNBC248 severity error
+not (if $DPM_ID_67822 + $DPM_ID_67821 + $DPM_ID_67819 + $DPM_ID_112813 > 0    -$DPM_ID_71099 - $DPM_ID_71473 - $DPM_ID_70668 - $DPM_ID_80324 + $DPM_ID_79678 + $DPM_ID_79624 + $DPM_ID_79732 + $DPM_ID_79705 + $DPM_ID_79759 - $DPM_ID_83422 + $DPM_ID_83036 + $DPM_ID_82982 + $DPM_ID_83090 + $DPM_ID_83063 + $DPM_ID_83117 > 0 else true)
+message "DNB check DNB_C248 failed. Formula used: if {f 13.01, r010, c010} + {f 13.01, r010, c020} + {f 13.01, r010, c030} + {f 13.01, r010, c040} > 0 then -{c 07.00.a, r010, c070, s001} - {c 07.00.a, r010, c080, s001} - {c 07.00.a, r010, c130, s001} - {c 08.01.a, r010, c060, s001} + {c 08.01.a, r010, c170, s001} + {c 08.01.a, r010, c180, s001} + {c 08.01.a, r010, c190, s001} + {c 08.01.a, r010, c200, s001} + {c 08.01.a, r010, c210, s001} - {c 08.01.a, r010, c060, s002} + {c 08.01.a, r010, c170, s002} + {c 08.01.a, r010, c180, s002} + {c 08.01.a, r010, c190, s002} + {c 08.01.a, r010, c200, s002} + {c 08.01.a, r010, c210, s002} > 0"
+
+@name("DNB Consistency Plausibility check: DNB_C249")
+@description("DNB Consistency Plausibility check: DNB_C249")
+raise DNBConsistencyPlausibilityCheckDNBC249 severity error
+not (if $DPM_ID_67822 + $DPM_ID_67821 + $DPM_ID_67819 + $DPM_ID_112813 > 0    -$DPM_ID_71099 - $DPM_ID_71473 - $DPM_ID_70668 - $DPM_ID_80324 + $DPM_ID_79678 + $DPM_ID_79624 + $DPM_ID_79732 + $DPM_ID_79705 + $DPM_ID_79759 - $DPM_ID_83422 + $DPM_ID_83036 + $DPM_ID_82982 + $DPM_ID_83090 + $DPM_ID_83063 + $DPM_ID_83117 > 0  else true)
+message "DNB check DNB_C249 failed. Formula used: if {f 13.01, r010, c010} + {f 13.01, r010, c020} + {f 13.01, r010, c030} + {f 13.01, r010, c040} > 0 then -{c 07.00.a, r010, c070, s001} - {c 07.00.a, r010, c080, s001} - {c 07.00.a, r010, c130, s001} - {c 08.01.a, r010, c060, s001} + {c 08.01.a, r010, c170, s001} + {c 08.01.a, r010, c180, s001} + {c 08.01.a, r010, c190, s001} + {c 08.01.a, r010, c200, s001} + {c 08.01.a, r010, c210, s001} - {c 08.01.a, r010, c060, s002} + {c 08.01.a, r010, c170, s002} + {c 08.01.a, r010, c180, s002} + {c 08.01.a, r010, c190, s002} + {c 08.01.a, r010, c200, s002} + {c 08.01.a, r010, c210, s002} > 0 "
+
+@name("DNB Consistency Plausibility check: DNB_C252")
+@description("DNB Consistency Plausibility check: DNB_C252")
+raise DNBConsistencyPlausibilityCheckDNBC252 severity error
+not ($DPM_ID_88742 == 0)
+message "DNB check DNB_C252 failed. Formula used: {c 07.00.a, r140, c010, s008} = 0"
+
+@name("DNB Consistency Plausibility check: DNB_C253")
+@description("DNB Consistency Plausibility check: DNB_C253")
+raise DNBConsistencyPlausibilityCheckDNBC253 severity error
+not ($DPM_ID_88552 == 0)
+message "DNB check DNB_C253 failed. Formula used: {c 07.00.a, r140, c010, s007} = 0"
+
+@name("DNB Consistency Plausibility check: DNB_C254")
+@description("DNB Consistency Plausibility check: DNB_C254")
+raise DNBConsistencyPlausibilityCheckDNBC254 severity error
+not ($DPM_ID_88709 == 0)
+message "DNB check DNB_C254 failed. Formula used: {c 07.00.a, r140, c010, s009} = 0"
+
+@name("DNB Consistency Plausibility check: DNB_C259")
+@description("DNB Consistency Plausibility check: DNB_C259")
+raise DNBConsistencyPlausibilityCheckDNBC259 severity error
+not ((($DPM_ID_32671) - ($DPM_ID_32429))::abs < 1000)
+message "DNB check DNB_C259 failed. Formula used: {c 01.00, r180, c010} = {f 01.03, r090, c010}"
+
+@name("DNB Consistency Plausibility check: DNB_C271")
+@description("DNB Consistency Plausibility check: DNB_C271")
+raise DNBConsistencyPlausibilityCheckDNBC271 severity error
+not ((($DPM_ID_82429 - $DPM_ID_82657) - ($DPM_ID_116977 - $DPM_ID_116999))::abs < 1000)
+message "DNB check DNB_C271 failed. Formula used: {c 08.01.a, r010, c255, s001} - {c 08.01.a, r010, c260, s001} = {c 08.01.a, r015, c255, s001} - {c 08.01.a, r015, c260, s001}"
+
+@name("DNB Consistency Plausibility check: DNB_C274")
+@description("DNB Consistency Plausibility check: DNB_C274")
+raise DNBConsistencyPlausibilityCheckDNBC274 severity error
+not (if $DPM_ID_70124 + $DPM_ID_67915 > 0    $DPM_ID_109489 > 0 else true)
+message "DNB check DNB_C274 failed. Formula used: if {c 02.00, r240, c010} + {c 02.00, r620, c010} > 0 then {c 04.00, r890, c010} > 0"
+
+@name("DNB Consistency Plausibility check: DNB_C275")
+@description("DNB Consistency Plausibility check: DNB_C275")
+raise DNBConsistencyPlausibilityCheckDNBC275 severity error
+not (if $DPM_ID_109490 > 0    $DPM_ID_109490 + (($DPM_ID_33413) - ($DPM_ID_109488))::abs < 1000 else true)
+message "DNB check DNB_C275 failed. Formula used: if {c 04.00, r870, c010} > 0 then {c 04.00, r870, c010} + {c 01.00, r010, c010} = {c 04.00, r880, c010}"
+
+@name("DNB Consistency Plausibility check: DNB_C276")
+@description("DNB Consistency Plausibility check: DNB_C276")
+raise DNBConsistencyPlausibilityCheckDNBC276 severity error
+not ($DPM_ID_85157 + $DPM_ID_85154 + $DPM_ID_85158 + $DPM_ID_85155 + $DPM_ID_85159 + $DPM_ID_85156 > 0)
+message "DNB check DNB_C276 failed. Formula used: {c 03.00, r070, c010} + {c 03.00, r080, c010} + {c 03.00, r090, c010} + {c 03.00, r100, c010} + {c 03.00, r110, c010} + {c 03.00, r120, c010} > 0"
+
+@name("DNB Consistency Plausibility check: DNB_C279")
+@description("DNB Consistency Plausibility check: DNB_C279")
+raise DNBConsistencyPlausibilityCheckDNBC279 severity error
+not (((-$DPM_ID_32693) - ($DPM_ID_113155))::abs < 1000)
+message "DNB check DNB_C279 failed. Formula used: -{c 01.00, r350, c010} = {f 01.01, r320, c010}"
+
+@name("DNB Consistency Plausibility check: DNB_C281")
+@description("DNB Consistency Plausibility check: DNB_C281")
+raise DNBConsistencyPlausibilityCheckDNBC281 severity error
+not ($DPM_ID_135745 < 1)
+message "DNB check DNB_C281 failed. Formula used: {c 47.00,r330,c010} < 1"
+
+@name("DNB Consistency Plausibility check: DNB_C282")
+@description("DNB Consistency Plausibility check: DNB_C282")
+raise DNBConsistencyPlausibilityCheckDNBC282 severity error
+not ($DPM_ID_135746 < 1)
+message "DNB check DNB_C282 failed. Formula used: {c 47.00,r340,c010} < 1"
+
+@name("DNB Consistency Plausibility check: DNB_CAP1")
+@description("DNB Consistency Plausibility check: DNB_CAP1")
+raise DNBConsistencyPlausibilityCheckDNBCAP1 severity error
+not (if $DPM_ID_45240 > 0    $DPM_ID_118915 > 0 else true)
+message "DNB check DNB_CAP1 failed. Formula used: if {c 04.00, r440, c010} > 0 then {c 04.00, r650, c010} > 0"
+
+@name("DNB Consistency Plausibility check: DNB_CAP2")
+@description("DNB Consistency Plausibility check: DNB_CAP2")
+raise DNBConsistencyPlausibilityCheckDNBCAP2 severity error
+not (if $DPM_ID_45236 > 0    $DPM_ID_118913 > 0 else true)
+message "DNB check DNB_CAP2 failed. Formula used: if {c 04.00, r300, c010} > 0 then {c 04.00, r660, c010} > 0"
+
+@name("DNB Consistency Plausibility check: DNB_CAP3")
+@description("DNB Consistency Plausibility check: DNB_CAP3")
+raise DNBConsistencyPlausibilityCheckDNBCAP3 severity error
+not (if $DPM_ID_45238 > 0    $DPM_ID_118914 > 0 else true)
+message "DNB check DNB_CAP3 failed. Formula used: if {c 04.00, r370, c010} > 0 then {c 04.00, r670, c010} > 0"
+
+@name("DNB Consistency Plausibility check: DNB_CAP5")
+@description("DNB Consistency Plausibility check: DNB_CAP5")
+raise DNBConsistencyPlausibilityCheckDNBCAP5 severity error
+not ((($DPM_ID_37975) - ($DPM_ID_85076 ))::abs <1000)
+message "DNB check DNB_CAP5 failed. Formula used: {c 05.01, r010, c040} = {c 05.01, r070, c040} + {c 05.01, r100, c040} "
+
+@name("DNB Consistency Plausibility check: DNB_GS500")
+@description("DNB Consistency Plausibility check: DNB_GS500")
+raise DNBConsistencyPlausibilityCheckDNBGS500 severity error
+not ((($DPM_ID_111679) - ($DPM_ID_33411 ))::abs < 1000)
+message "DNB check DNB_GS500 failed. Formula used: {c 06.01, r010, c370} = {c 01.00, r020, c010} "
+
+@name("DNB Consistency Plausibility check: DNB_GS501")
+@description("DNB Consistency Plausibility check: DNB_GS501")
+raise DNBConsistencyPlausibilityCheckDNBGS501 severity error
+not ((($DPM_ID_111680) - ($DPM_ID_33413 ))::abs < 1000)
+message "DNB check DNB_GS501 failed. Formula used: {c 06.01, r010, c360} = {c 01.00, r010, c010} "
+
+@name("DNB Consistency Plausibility check: DNB_GS502")
+@description("DNB Consistency Plausibility check: DNB_GS502")
+raise DNBConsistencyPlausibilityCheckDNBGS502 severity error
+not ((($DPM_ID_111678) - ($DPM_ID_33410 ))::abs < 1000)
+message "DNB check DNB_GS502 failed. Formula used: {c 06.01, r010, c380} = {c 01.00, r530, c010} "
+
+@name("DNB Consistency Plausibility check: DNB_GS506")
+@description("DNB Consistency Plausibility check: DNB_GS506")
+raise DNBConsistencyPlausibilityCheckDNBGS506 severity error
+not ((($DPM_ID_111691) - ($DPM_ID_78933 + $DPM_ID_85080))::abs < 1000)
+message "DNB check DNB_GS506 failed. Formula used: {c 06.01, r010, c260} = {c 02.00, r040, c010} + {c 02.00, r490, c010}"
+
+@name("DNB Consistency Plausibility check: DNB_GS507")
+@description("DNB Consistency Plausibility check: DNB_GS507")
+raise DNBConsistencyPlausibilityCheckDNBGS507 severity error
+not ((($DPM_ID_111690) - ($DPM_ID_149591 ))::abs < 1000)
+message "DNB check DNB_GS507 failed. Formula used: {c 06.01, r010, c270} = {c 02.00, r520, c010} "
+
+@name("DNB Consistency Plausibility check: DNB_GS508")
+@description("DNB Consistency Plausibility check: DNB_GS508")
+raise DNBConsistencyPlausibilityCheckDNBGS508 severity error
+not ((($DPM_ID_111694) - ($DPM_ID_78937 ))::abs < 1000)
+message "DNB check DNB_GS508 failed. Formula used: {c 06.01, r010, c280} = {c 02.00, r590, c010} "
+
+@name("DNB Consistency Plausibility check: DNB_GS510")
+@description("DNB Consistency Plausibility check: DNB_GS510")
+raise DNBConsistencyPlausibilityCheckDNBGS510 severity error
+not ((($DPM_ID_111673) - ($DPM_ID_111672 + $DPM_ID_111677 ))::abs < 1000)
+message "DNB check DNB_GS510 failed. Formula used: {c 06.01, r010, c300} = {c 06.01, r010, c310} + {c 06.01, r010, c340} "
+
+@name("DNB Consistency Plausibility check: DNB_GS511")
+@description("DNB Consistency Plausibility check: DNB_GS511")
+raise DNBConsistencyPlausibilityCheckDNBGS511 severity error
+not ((($DPM_ID_111672) - ($DPM_ID_111671 + $DPM_ID_111676 ))::abs < 1000)
+message "DNB check DNB_GS511 failed. Formula used: {c 06.01, r010, c310} = {c 06.01, r010, c320} + {c 06.01, r010, c330} "
+
+@name("DNB Consistency Plausibility check: DNB_GS512")
+@description("DNB Consistency Plausibility check: DNB_GS512")
+raise DNBConsistencyPlausibilityCheckDNBGS512 severity error
+not ((($DPM_ID_111671) - ($DPM_ID_33293 ))::abs < 1000)
+message "DNB check DNB_GS512 failed. Formula used: {c 06.01, r010, c320} = {c 01.00, r230, c010} "
+
+@name("DNB Consistency Plausibility check: DNB_GS513")
+@description("DNB Consistency Plausibility check: DNB_GS513")
+raise DNBConsistencyPlausibilityCheckDNBGS513 severity error
+not ((($DPM_ID_111676) - ($DPM_ID_33292 ))::abs < 1000)
+message "DNB check DNB_GS513 failed. Formula used: {c 06.01, r010, c330} = {c 01.00, r670, c010} "
+
+@name("DNB Consistency Plausibility check: DNB_GS514")
+@description("DNB Consistency Plausibility check: DNB_GS514")
+raise DNBConsistencyPlausibilityCheckDNBGS514 severity error
+not ((($DPM_ID_111677) - ($DPM_ID_33291 ))::abs < 1000)
+message "DNB check DNB_GS514 failed. Formula used: {c 06.01, r010, c340} = {c 01.00, r890, c010} "
+
+@name("DNB Consistency Plausibility check: DNB_GS517")
+@description("DNB Consistency Plausibility check: DNB_GS517")
+raise DNBConsistencyPlausibilityCheckDNBGS517 severity error
+not ((($DPM_ID_111690) - ($DPM_ID_149591))::abs < 1000)
+message "DNB check DNB_GS517 failed. Formula used: {c 06.01, r010, c270} = {c 02.00, r520, c010}"
+
+@name("DNB Consistency Plausibility check: DNB_LR0001")
+@description("DNB Consistency Plausibility check: DNB_LR0001")
+raise DNBConsistencyPlausibilityCheckDNBLR0001 severity error
+not ((($DPM_ID_135745) - ($DPM_ID_132949 / $DPM_ID_134660))::abs < 1000)
+message "DNB check DNB_LR0001 failed. Formula used: {r330} = {r310} / {r290}"
+
+@name("DNB Consistency Plausibility check: DNB_LR0002")
+@description("DNB Consistency Plausibility check: DNB_LR0002")
+raise DNBConsistencyPlausibilityCheckDNBLR0002 severity error
+not ((($DPM_ID_135746) - ($DPM_ID_84817 / $DPM_ID_134661))::abs < 1000)
+message "DNB check DNB_LR0002 failed. Formula used: {r340} = {r320} / {r300}"
+
+@name("DNB Consistency Plausibility check: DNB_LR0003")
+@description("DNB Consistency Plausibility check: DNB_LR0003")
+raise DNBConsistencyPlausibilityCheckDNBLR0003 severity error
+not ($DPM_ID_135745 >= 0)
+message "DNB check DNB_LR0003 failed. Formula used: {r330} >= 0"
+
+@name("DNB Consistency Plausibility check: DNB_LR0004")
+@description("DNB Consistency Plausibility check: DNB_LR0004")
+raise DNBConsistencyPlausibilityCheckDNBLR0004 severity error
+not ($DPM_ID_135746 >= 0)
+message "DNB check DNB_LR0004 failed. Formula used: {r340} >= 0"
+
+@name("DNB Consistency Plausibility check: DNB_LR0005")
+@description("DNB Consistency Plausibility check: DNB_LR0005")
+raise DNBConsistencyPlausibilityCheckDNBLR0005 severity error
+not ($DPM_ID_135745 >= 0.03)
+message "DNB check DNB_LR0005 failed. Formula used: {r330} >= 0.03"
+
+@name("DNB Consistency Plausibility check: DNB_LR0006")
+@description("DNB Consistency Plausibility check: DNB_LR0006")
+raise DNBConsistencyPlausibilityCheckDNBLR0006 severity error
+not ($DPM_ID_135746 >= 0.03)
+message "DNB check DNB_LR0006 failed. Formula used: {r340} >= 0.03"
+
+@name("DNB Consistency Plausibility check: DNB_LR0007")
+@description("DNB Consistency Plausibility check: DNB_LR0007")
+raise DNBConsistencyPlausibilityCheckDNBLR0007 severity error
+not ((($DPM_ID_33411) - ($DPM_ID_33411))::abs < 1000)
+message "DNB check DNB_LR0007 failed. Formula used: {c 42.00, r020, c010} = {c 01.00, r020, c010}"
+
+@name("DNB Consistency Plausibility check: DNB_LR0008")
+@description("DNB Consistency Plausibility check: DNB_LR0008")
+raise DNBConsistencyPlausibilityCheckDNBLR0008 severity error
+not ((($DPM_ID_132948) - ($DPM_ID_33411 - $DPM_ID_38541 - $DPM_ID_38533 - $DPM_ID_38632))::abs < 1000)
+message "DNB check DNB_LR0008 failed. Formula used: {c 42.00, r010, c010} = {c 01.00, r020, c010} - {c 01.00, r220, c010} - {c 01.00, r240, c010} - {c 01.00, r520, c010}"
+
+@name("DNB Consistency Plausibility check: DNB_LR0009")
+@description("DNB Consistency Plausibility check: DNB_LR0009")
+raise DNBConsistencyPlausibilityCheckDNBLR0009 severity error
+not ((($DPM_ID_33413) - ($DPM_ID_33413))::abs < 1000)
+message "DNB check DNB_LR0009 failed. Formula used: {c 42.00, r040, c010} = {c 01.00, r010, c010}"
+
+@name("DNB Consistency Plausibility check: DNB_LR0065")
+@description("DNB Consistency Plausibility check: DNB_LR0065")
+raise DNBConsistencyPlausibilityCheckDNBLR0065 severity error
+not ($DPM_ID_135745 < 1)
+message "DNB check DNB_LR0065 failed. Formula used: {c 47.00, r330, c010} < 1"
+
+@name("DNB Consistency Plausibility check: DNB_LR0066")
+@description("DNB Consistency Plausibility check: DNB_LR0066")
+raise DNBConsistencyPlausibilityCheckDNBLR0066 severity error
+not ($DPM_ID_135746 < 1)
+message "DNB check DNB_LR0066 failed. Formula used: {c 47.00, r340, c010} < 1"
+
+@name("DNB Consistency Plausibility check: DNB_SEC1")
+@description("DNB Consistency Plausibility check: DNB_SEC1")
+raise DNBConsistencyPlausibilityCheckDNBSEC1 severity error
+not ((($DPM_ID_115890) - ($DPM_ID_115876 +  $DPM_ID_115877 +  $DPM_ID_115878 +  $DPM_ID_115879 +  $DPM_ID_115880))::abs < 1000)
+message "DNB check DNB_SEC1 failed. Formula used: {c 12.00, r010, c190} = {c 12.00, r250, c190} +  {c 12.00, r260, c190} +  {c 12.00, r270, c190} +  {c 12.00, r280, c190} +  {c 12.00, r290, c190}"
+
+@name("DNB Consistency Plausibility check: DNB_SEC2")
+@description("DNB Consistency Plausibility check: DNB_SEC2")
+raise DNBConsistencyPlausibilityCheckDNBSEC2 severity error
+not ((($DPM_ID_116466) - ($DPM_ID_116454 +  $DPM_ID_116456 +  $DPM_ID_116458 +  $DPM_ID_116460 +  $DPM_ID_116462))::abs < 1000)
+message "DNB check DNB_SEC2 failed. Formula used: {c 12.00, r010, c330} = {c 12.00, r250, c330} +  {c 12.00, r260, c330} +  {c 12.00, r270, c330} +  {c 12.00, r280, c330} +  {c 12.00, r290, c330}"
+
+@name("DNB Consistency Plausibility check: v0655_m")
+@description("DNB Consistency Plausibility check: v0655_m")
+raise DNBConsistencyPlausibilityCheckV0655M severity error
+not ({c 28.00, (rnnn), c230} * $DPM_ID_117490 == {c 28.00, (rnnn), c210})
+message "DNB check v0655_m failed. Formula used: {c 28.00, (rnnn), c230} * {c 04.00, r226, c010} = {c 28.00, (rnnn), c210}"
+
+@name("DNB Consistency Plausibility check: v0656_m")
+@description("DNB Consistency Plausibility check: v0656_m")
+raise DNBConsistencyPlausibilityCheckV0656M severity error
+not ({c 28.00, (rnnn), c350} * $DPM_ID_117490 == {c 28.00, (rnnn), c330})
+message "DNB check v0656_m failed. Formula used: {c 28.00, (rnnn), c350} * {c 04.00, r226, c010} = {c 28.00, (rnnn), c330}"
+
+@name("DNB Consistency Plausibility check: v2708_m_1")
+@description("DNB Consistency Plausibility check: v2708_m")
+raise DNBConsistencyPlausibilityCheckV2708M_1 severity error
+not ((($DPM_ID_112937 + $DPM_ID_112973) - ($DPM_ID_110270 + $DPM_ID_109850)) <= 1000)
+message "DNB check v2708_m failed. Formula used: {f 18.00.a, c200} + {f 18.00.c, c210} <= {f 18.00.a, c060} + {f 18.00.b, c150}"
+
+@name("DNB Consistency Plausibility check: v2708_m_2")
+@description("DNB Consistency Plausibility check: v2708_m")
+raise DNBConsistencyPlausibilityCheckV2708M_2 severity error
+not ((($DPM_ID_112906 + $DPM_ID_112942) - ($DPM_ID_109907 + $DPM_ID_109665)) <= 1000)
+message "DNB check v2708_m failed. Formula used: {f 18.00.a, c200} + {f 18.00.c, c210} <= {f 18.00.a, c060} + {f 18.00.b, c150}"
+
+@name("DNB Consistency Plausibility check: v2708_m_3")
+@description("DNB Consistency Plausibility check: v2708_m")
+raise DNBConsistencyPlausibilityCheckV2708M_3 severity error
+not ((($DPM_ID_112914 + $DPM_ID_112950) - ($DPM_ID_109999 + $DPM_ID_109713)) <= 1000)
+message "DNB check v2708_m failed. Formula used: {f 18.00.a, c200} + {f 18.00.c, c210} <= {f 18.00.a, c060} + {f 18.00.b, c150}"
+
+@name("DNB Consistency Plausibility check: v2708_m_4")
+@description("DNB Consistency Plausibility check: v2708_m")
+raise DNBConsistencyPlausibilityCheckV2708M_4 severity error
+not ((($DPM_ID_112910 + $DPM_ID_112946) - ($DPM_ID_109953 + $DPM_ID_109689)) <= 1000)
+message "DNB check v2708_m failed. Formula used: {f 18.00.a, c200} + {f 18.00.c, c210} <= {f 18.00.a, c060} + {f 18.00.b, c150}"
+
+@name("DNB Consistency Plausibility check: v2708_m_5")
+@description("DNB Consistency Plausibility check: v2708_m")
+raise DNBConsistencyPlausibilityCheckV2708M_5 severity error
+not ((($DPM_ID_112932 + $DPM_ID_112968) - ($DPM_ID_110206 + $DPM_ID_109821)) <= 1000)
+message "DNB check v2708_m failed. Formula used: {f 18.00.a, c200} + {f 18.00.c, c210} <= {f 18.00.a, c060} + {f 18.00.b, c150}"
+
+@name("DNB Consistency Plausibility check: v2708_m_6")
+@description("DNB Consistency Plausibility check: v2708_m")
+raise DNBConsistencyPlausibilityCheckV2708M_6 severity error
+not ((($DPM_ID_112928 + $DPM_ID_112963) - ($DPM_ID_110160 + $DPM_ID_109797)) <= 1000)
+message "DNB check v2708_m failed. Formula used: {f 18.00.a, c200} + {f 18.00.c, c210} <= {f 18.00.a, c060} + {f 18.00.b, c150}"
+
+@name("DNB Consistency Plausibility check: v2708_m_7")
+@description("DNB Consistency Plausibility check: v2708_m")
+raise DNBConsistencyPlausibilityCheckV2708M_7 severity error
+not ((($DPM_ID_112939 + $DPM_ID_112975) - ($DPM_ID_110280 + $DPM_ID_109864)) <= 1000)
+message "DNB check v2708_m failed. Formula used: {f 18.00.a, c200} + {f 18.00.c, c210} <= {f 18.00.a, c060} + {f 18.00.b, c150}"
+
+@name("DNB Consistency Plausibility check: v2708_m_8")
+@description("DNB Consistency Plausibility check: v2708_m")
+raise DNBConsistencyPlausibilityCheckV2708M_8 severity error
+not ((($DPM_ID_112907 + $DPM_ID_112943) - ($DPM_ID_109912 + $DPM_ID_109672)) <= 1000)
+message "DNB check v2708_m failed. Formula used: {f 18.00.a, c200} + {f 18.00.c, c210} <= {f 18.00.a, c060} + {f 18.00.b, c150}"
+
+@name("DNB Consistency Plausibility check: v2708_m_9")
+@description("DNB Consistency Plausibility check: v2708_m")
+raise DNBConsistencyPlausibilityCheckV2708M_9 severity error
+not ((($DPM_ID_112915 + $DPM_ID_112951) - ($DPM_ID_110004 + $DPM_ID_109720)) <= 1000)
+message "DNB check v2708_m failed. Formula used: {f 18.00.a, c200} + {f 18.00.c, c210} <= {f 18.00.a, c060} + {f 18.00.b, c150}"
+
+@name("DNB Consistency Plausibility check: v2708_m_10")
+@description("DNB Consistency Plausibility check: v2708_m")
+raise DNBConsistencyPlausibilityCheckV2708M_10 severity error
+not ((($DPM_ID_112911 + $DPM_ID_112947) - ($DPM_ID_109958 + $DPM_ID_109696)) <= 1000)
+message "DNB check v2708_m failed. Formula used: {f 18.00.a, c200} + {f 18.00.c, c210} <= {f 18.00.a, c060} + {f 18.00.b, c150}"
+
+@name("DNB Consistency Plausibility check: v2708_m_11")
+@description("DNB Consistency Plausibility check: v2708_m")
+raise DNBConsistencyPlausibilityCheckV2708M_11 severity error
+not ((($DPM_ID_112933 + $DPM_ID_112969) - ($DPM_ID_110211 + $DPM_ID_109828)) <= 1000)
+message "DNB check v2708_m failed. Formula used: {f 18.00.a, c200} + {f 18.00.c, c210} <= {f 18.00.a, c060} + {f 18.00.b, c150}"
+
+@name("DNB Consistency Plausibility check: v2708_m_12")
+@description("DNB Consistency Plausibility check: v2708_m")
+raise DNBConsistencyPlausibilityCheckV2708M_12 severity error
+not ((($DPM_ID_112929 + $DPM_ID_112964) - ($DPM_ID_110165 + $DPM_ID_109804)) <= 1000)
+message "DNB check v2708_m failed. Formula used: {f 18.00.a, c200} + {f 18.00.c, c210} <= {f 18.00.a, c060} + {f 18.00.b, c150}"
+
+@name("DNB Consistency Plausibility check: v2708_m_13")
+@description("DNB Consistency Plausibility check: v2708_m")
+raise DNBConsistencyPlausibilityCheckV2708M_13 severity error
+not ((($DPM_ID_112923 + $DPM_ID_112959) - ($DPM_ID_110096 + $DPM_ID_109768)) <= 1000)
+message "DNB check v2708_m failed. Formula used: {f 18.00.a, c200} + {f 18.00.c, c210} <= {f 18.00.a, c060} + {f 18.00.b, c150}"
+
+@name("DNB Consistency Plausibility check: v2708_m_14")
+@description("DNB Consistency Plausibility check: v2708_m")
+raise DNBConsistencyPlausibilityCheckV2708M_14 severity error
+not ((($DPM_ID_112927 + $DPM_ID_112965) - ($DPM_ID_110155 + $DPM_ID_109790)) <= 1000)
+message "DNB check v2708_m failed. Formula used: {f 18.00.a, c200} + {f 18.00.c, c210} <= {f 18.00.a, c060} + {f 18.00.b, c150}"
+
+@name("DNB Consistency Plausibility check: v2708_m_15")
+@description("DNB Consistency Plausibility check: v2708_m")
+raise DNBConsistencyPlausibilityCheckV2708M_15 severity error
+not ((($DPM_ID_112920 + $DPM_ID_112955) - ($DPM_ID_110068 + $DPM_ID_109749)) <= 1000)
+message "DNB check v2708_m failed. Formula used: {f 18.00.a, c200} + {f 18.00.c, c210} <= {f 18.00.a, c060} + {f 18.00.b, c150}"
+
+@name("DNB Consistency Plausibility check: v2708_m_16")
+@description("DNB Consistency Plausibility check: v2708_m")
+raise DNBConsistencyPlausibilityCheckV2708M_16 severity error
+not ((($DPM_ID_112919 + $DPM_ID_112957) - ($DPM_ID_110063 + $DPM_ID_109742)) <= 1000)
+message "DNB check v2708_m failed. Formula used: {f 18.00.a, c200} + {f 18.00.c, c210} <= {f 18.00.a, c060} + {f 18.00.b, c150}"
+
+@name("DNB Consistency Plausibility check: v2708_m_17")
+@description("DNB Consistency Plausibility check: v2708_m")
+raise DNBConsistencyPlausibilityCheckV2708M_17 severity error
+not ((($DPM_ID_112921 + $DPM_ID_112956) - ($DPM_ID_110069 + $DPM_ID_109750)) <= 1000)
+message "DNB check v2708_m failed. Formula used: {f 18.00.a, c200} + {f 18.00.c, c210} <= {f 18.00.a, c060} + {f 18.00.b, c150}"
+
+@name("DNB Consistency Plausibility check: v2708_m_18")
+@description("DNB Consistency Plausibility check: v2708_m")
+raise DNBConsistencyPlausibilityCheckV2708M_18 severity error
+not ((($DPM_ID_112938 + $DPM_ID_112974) - ($DPM_ID_110275 + $DPM_ID_109857)) <= 1000)
+message "DNB check v2708_m failed. Formula used: {f 18.00.a, c200} + {f 18.00.c, c210} <= {f 18.00.a, c060} + {f 18.00.b, c150}"
+
+@name("DNB Consistency Plausibility check: v2708_m_19")
+@description("DNB Consistency Plausibility check: v2708_m")
+raise DNBConsistencyPlausibilityCheckV2708M_19 severity error
+not ((($DPM_ID_113071 + $DPM_ID_113099) - ($DPM_ID_110645 + $DPM_ID_110849)) <= 1000)
+message "DNB check v2708_m failed. Formula used: {f 18.00.a, c200} + {f 18.00.c, c210} <= {f 18.00.a, c060} + {f 18.00.b, c150}"
+
+@name("DNB Consistency Plausibility check: v2708_m_20")
+@description("DNB Consistency Plausibility check: v2708_m")
+raise DNBConsistencyPlausibilityCheckV2708M_20 severity error
+not ((($DPM_ID_113048 + $DPM_ID_113076) - ($DPM_ID_110375 + $DPM_ID_110712)) <= 1000)
+message "DNB check v2708_m failed. Formula used: {f 18.00.a, c200} + {f 18.00.c, c210} <= {f 18.00.a, c060} + {f 18.00.b, c150}"
+
+@name("DNB Consistency Plausibility check: v2708_m_21")
+@description("DNB Consistency Plausibility check: v2708_m")
+raise DNBConsistencyPlausibilityCheckV2708M_21 severity error
+not ((($DPM_ID_113056 + $DPM_ID_113084) - ($DPM_ID_110467 + $DPM_ID_110760)) <= 1000)
+message "DNB check v2708_m failed. Formula used: {f 18.00.a, c200} + {f 18.00.c, c210} <= {f 18.00.a, c060} + {f 18.00.b, c150}"
+
+@name("DNB Consistency Plausibility check: v2708_m_22")
+@description("DNB Consistency Plausibility check: v2708_m")
+raise DNBConsistencyPlausibilityCheckV2708M_22 severity error
+not ((($DPM_ID_113052 + $DPM_ID_113080) - ($DPM_ID_110421 + $DPM_ID_110736)) <= 1000)
+message "DNB check v2708_m failed. Formula used: {f 18.00.a, c200} + {f 18.00.c, c210} <= {f 18.00.a, c060} + {f 18.00.b, c150}"
+
+@name("DNB Consistency Plausibility check: v2708_m_23")
+@description("DNB Consistency Plausibility check: v2708_m")
+raise DNBConsistencyPlausibilityCheckV2708M_23 severity error
+not ((($DPM_ID_113066 + $DPM_ID_113094) - ($DPM_ID_110582 + $DPM_ID_110820)) <= 1000)
+message "DNB check v2708_m failed. Formula used: {f 18.00.a, c200} + {f 18.00.c, c210} <= {f 18.00.a, c060} + {f 18.00.b, c150}"
+
+@name("DNB Consistency Plausibility check: v2708_m_24")
+@description("DNB Consistency Plausibility check: v2708_m")
+raise DNBConsistencyPlausibilityCheckV2708M_24 severity error
+not ((($DPM_ID_113062 + $DPM_ID_113090) - ($DPM_ID_110536 + $DPM_ID_110796)) <= 1000)
+message "DNB check v2708_m failed. Formula used: {f 18.00.a, c200} + {f 18.00.c, c210} <= {f 18.00.a, c060} + {f 18.00.b, c150}"
+
+@name("DNB Consistency Plausibility check: v2708_m_25")
+@description("DNB Consistency Plausibility check: v2708_m")
+raise DNBConsistencyPlausibilityCheckV2708M_25 severity error
+not ((($DPM_ID_113073 + $DPM_ID_113101) - ($DPM_ID_110655 + $DPM_ID_110863)) <= 1000)
+message "DNB check v2708_m failed. Formula used: {f 18.00.a, c200} + {f 18.00.c, c210} <= {f 18.00.a, c060} + {f 18.00.b, c150}"
+
+@name("DNB Consistency Plausibility check: v2708_m_26")
+@description("DNB Consistency Plausibility check: v2708_m")
+raise DNBConsistencyPlausibilityCheckV2708M_26 severity error
+not ((($DPM_ID_113049 + $DPM_ID_113077) - ($DPM_ID_110380 + $DPM_ID_110719)) <= 1000)
+message "DNB check v2708_m failed. Formula used: {f 18.00.a, c200} + {f 18.00.c, c210} <= {f 18.00.a, c060} + {f 18.00.b, c150}"
+
+@name("DNB Consistency Plausibility check: v2708_m_27")
+@description("DNB Consistency Plausibility check: v2708_m")
+raise DNBConsistencyPlausibilityCheckV2708M_27 severity error
+not ((($DPM_ID_113057 + $DPM_ID_113085) - ($DPM_ID_110472 + $DPM_ID_110767)) <= 1000)
+message "DNB check v2708_m failed. Formula used: {f 18.00.a, c200} + {f 18.00.c, c210} <= {f 18.00.a, c060} + {f 18.00.b, c150}"
+
+@name("DNB Consistency Plausibility check: v2708_m_28")
+@description("DNB Consistency Plausibility check: v2708_m")
+raise DNBConsistencyPlausibilityCheckV2708M_28 severity error
+not ((($DPM_ID_113053 + $DPM_ID_113081) - ($DPM_ID_110426 + $DPM_ID_110743)) <= 1000)
+message "DNB check v2708_m failed. Formula used: {f 18.00.a, c200} + {f 18.00.c, c210} <= {f 18.00.a, c060} + {f 18.00.b, c150}"
+
+@name("DNB Consistency Plausibility check: v2708_m_29")
+@description("DNB Consistency Plausibility check: v2708_m")
+raise DNBConsistencyPlausibilityCheckV2708M_29 severity error
+not ((($DPM_ID_113067 + $DPM_ID_113095) - ($DPM_ID_110587 + $DPM_ID_110827)) <= 1000)
+message "DNB check v2708_m failed. Formula used: {f 18.00.a, c200} + {f 18.00.c, c210} <= {f 18.00.a, c060} + {f 18.00.b, c150}"
+
+@name("DNB Consistency Plausibility check: v2708_m_30")
+@description("DNB Consistency Plausibility check: v2708_m")
+raise DNBConsistencyPlausibilityCheckV2708M_30 severity error
+not ((($DPM_ID_113063 + $DPM_ID_113091) - ($DPM_ID_110541 + $DPM_ID_110803)) <= 1000)
+message "DNB check v2708_m failed. Formula used: {f 18.00.a, c200} + {f 18.00.c, c210} <= {f 18.00.a, c060} + {f 18.00.b, c150}"
+
+@name("DNB Consistency Plausibility check: v2708_m_31")
+@description("DNB Consistency Plausibility check: v2708_m")
+raise DNBConsistencyPlausibilityCheckV2708M_31 severity error
+not ((($DPM_ID_113059 + $DPM_ID_113087) - ($DPM_ID_110495 + $DPM_ID_110779)) <= 1000)
+message "DNB check v2708_m failed. Formula used: {f 18.00.a, c200} + {f 18.00.c, c210} <= {f 18.00.a, c060} + {f 18.00.b, c150}"
+
+@name("DNB Consistency Plausibility check: v2708_m_32")
+@description("DNB Consistency Plausibility check: v2708_m")
+raise DNBConsistencyPlausibilityCheckV2708M_32 severity error
+not ((($DPM_ID_113072 + $DPM_ID_113100) - ($DPM_ID_110650 + $DPM_ID_110856)) <= 1000)
+message "DNB check v2708_m failed. Formula used: {f 18.00.a, c200} + {f 18.00.c, c210} <= {f 18.00.a, c060} + {f 18.00.b, c150}"
+
+@name("DNB Consistency Plausibility check: v2708_m_33")
+@description("DNB Consistency Plausibility check: v2708_m")
+raise DNBConsistencyPlausibilityCheckV2708M_33 severity error
+not ((($DPM_ID_113108 + $DPM_ID_113110) - ($DPM_ID_110887 + $DPM_ID_110900)) <= 1000)
+message "DNB check v2708_m failed. Formula used: {f 18.00.a, c200} + {f 18.00.c, c210} <= {f 18.00.a, c060} + {f 18.00.b, c150}"
+
+@name("DNB Consistency Plausibility check: v3091_m_1")
+@description("DNB Consistency Plausibility check: v3091_m")
+raise DNBConsistencyPlausibilityCheckV3091M_1 severity error
+not ((($DPM_ID_148920 + $DPM_ID_112970) - ($DPM_ID_110221 + $DPM_ID_109834)) <= 1000)
+message "DNB check v3091_m failed. Formula used: {f 19.00.a, c170} + {f 19.00.c, c180} <= {f 19.00.a, c010} + {f 19.00.b, c120}"
+
+@name("DNB Consistency Plausibility check: v3091_m_2")
+@description("DNB Consistency Plausibility check: v3091_m")
+raise DNBConsistencyPlausibilityCheckV3091M_2 severity error
+not ((($DPM_ID_148905 + $DPM_ID_112940) - ($DPM_ID_109874 + $DPM_ID_109654)) <= 1000)
+message "DNB check v3091_m failed. Formula used: {f 19.00.a, c170} + {f 19.00.c, c180} <= {f 19.00.a, c010} + {f 19.00.b, c120}"
+
+@name("DNB Consistency Plausibility check: v3091_m_3")
+@description("DNB Consistency Plausibility check: v3091_m")
+raise DNBConsistencyPlausibilityCheckV3091M_3 severity error
+not ((($DPM_ID_148909 + $DPM_ID_112948) - ($DPM_ID_109966 + $DPM_ID_109702)) <= 1000)
+message "DNB check v3091_m failed. Formula used: {f 19.00.a, c170} + {f 19.00.c, c180} <= {f 19.00.a, c010} + {f 19.00.b, c120}"
+
+@name("DNB Consistency Plausibility check: v3091_m_4")
+@description("DNB Consistency Plausibility check: v3091_m")
+raise DNBConsistencyPlausibilityCheckV3091M_4 severity error
+not ((($DPM_ID_148907 + $DPM_ID_112944) - ($DPM_ID_109920 + $DPM_ID_109678)) <= 1000)
+message "DNB check v3091_m failed. Formula used: {f 19.00.a, c170} + {f 19.00.c, c180} <= {f 19.00.a, c010} + {f 19.00.b, c120}"
+
+@name("DNB Consistency Plausibility check: v3091_m_5")
+@description("DNB Consistency Plausibility check: v3091_m")
+raise DNBConsistencyPlausibilityCheckV3091M_5 severity error
+not ((($DPM_ID_148918 + $DPM_ID_112966) - ($DPM_ID_110173 + $DPM_ID_109810)) <= 1000)
+message "DNB check v3091_m failed. Formula used: {f 19.00.a, c170} + {f 19.00.c, c180} <= {f 19.00.a, c010} + {f 19.00.b, c120}"
+
+@name("DNB Consistency Plausibility check: v3091_m_6")
+@description("DNB Consistency Plausibility check: v3091_m")
+raise DNBConsistencyPlausibilityCheckV3091M_6 severity error
+not ((($DPM_ID_148916 + $DPM_ID_112960) - ($DPM_ID_110110 + $DPM_ID_109777)) <= 1000)
+message "DNB check v3091_m failed. Formula used: {f 19.00.a, c170} + {f 19.00.c, c180} <= {f 19.00.a, c010} + {f 19.00.b, c120}"
+
+@name("DNB Consistency Plausibility check: v3091_m_7")
+@description("DNB Consistency Plausibility check: v3091_m")
+raise DNBConsistencyPlausibilityCheckV3091M_7 severity error
+not ((($DPM_ID_148922 + $DPM_ID_112972) - ($DPM_ID_110229 + $DPM_ID_109840)) <= 1000)
+message "DNB check v3091_m failed. Formula used: {f 19.00.a, c170} + {f 19.00.c, c180} <= {f 19.00.a, c010} + {f 19.00.b, c120}"
+
+@name("DNB Consistency Plausibility check: v3091_m_8")
+@description("DNB Consistency Plausibility check: v3091_m")
+raise DNBConsistencyPlausibilityCheckV3091M_8 severity error
+not ((($DPM_ID_148906 + $DPM_ID_112941) - ($DPM_ID_109878 + $DPM_ID_109657)) <= 1000)
+message "DNB check v3091_m failed. Formula used: {f 19.00.a, c170} + {f 19.00.c, c180} <= {f 19.00.a, c010} + {f 19.00.b, c120}"
+
+@name("DNB Consistency Plausibility check: v3091_m_9")
+@description("DNB Consistency Plausibility check: v3091_m")
+raise DNBConsistencyPlausibilityCheckV3091M_9 severity error
+not ((($DPM_ID_148910 + $DPM_ID_112949) - ($DPM_ID_109970 + $DPM_ID_109705)) <= 1000)
+message "DNB check v3091_m failed. Formula used: {f 19.00.a, c170} + {f 19.00.c, c180} <= {f 19.00.a, c010} + {f 19.00.b, c120}"
+
+@name("DNB Consistency Plausibility check: v3091_m_10")
+@description("DNB Consistency Plausibility check: v3091_m")
+raise DNBConsistencyPlausibilityCheckV3091M_10 severity error
+not ((($DPM_ID_148908 + $DPM_ID_112945) - ($DPM_ID_109924 + $DPM_ID_109681)) <= 1000)
+message "DNB check v3091_m failed. Formula used: {f 19.00.a, c170} + {f 19.00.c, c180} <= {f 19.00.a, c010} + {f 19.00.b, c120}"
+
+@name("DNB Consistency Plausibility check: v3091_m_11")
+@description("DNB Consistency Plausibility check: v3091_m")
+raise DNBConsistencyPlausibilityCheckV3091M_11 severity error
+not ((($DPM_ID_148919 + $DPM_ID_112967) - ($DPM_ID_110177 + $DPM_ID_109813)) <= 1000)
+message "DNB check v3091_m failed. Formula used: {f 19.00.a, c170} + {f 19.00.c, c180} <= {f 19.00.a, c010} + {f 19.00.b, c120}"
+
+@name("DNB Consistency Plausibility check: v3091_m_12")
+@description("DNB Consistency Plausibility check: v3091_m")
+raise DNBConsistencyPlausibilityCheckV3091M_12 severity error
+not ((($DPM_ID_148917 + $DPM_ID_112961) - ($DPM_ID_110114 + $DPM_ID_109780)) <= 1000)
+message "DNB check v3091_m failed. Formula used: {f 19.00.a, c170} + {f 19.00.c, c180} <= {f 19.00.a, c010} + {f 19.00.b, c120}"
+
+@name("DNB Consistency Plausibility check: v3091_m_13")
+@description("DNB Consistency Plausibility check: v3091_m")
+raise DNBConsistencyPlausibilityCheckV3091M_13 severity error
+not ((($DPM_ID_148914 + $DPM_ID_112958) - ($DPM_ID_110079 + $DPM_ID_109762)) <= 1000)
+message "DNB check v3091_m failed. Formula used: {f 19.00.a, c170} + {f 19.00.c, c180} <= {f 19.00.a, c010} + {f 19.00.b, c120}"
+
+@name("DNB Consistency Plausibility check: v3091_m_14")
+@description("DNB Consistency Plausibility check: v3091_m")
+raise DNBConsistencyPlausibilityCheckV3091M_14 severity error
+not ((($DPM_ID_148915 + $DPM_ID_112962) - ($DPM_ID_110106 + $DPM_ID_109774)) <= 1000)
+message "DNB check v3091_m failed. Formula used: {f 19.00.a, c170} + {f 19.00.c, c180} <= {f 19.00.a, c010} + {f 19.00.b, c120}"
+
+@name("DNB Consistency Plausibility check: v3091_m_15")
+@description("DNB Consistency Plausibility check: v3091_m")
+raise DNBConsistencyPlausibilityCheckV3091M_15 severity error
+not ((($DPM_ID_148912 + $DPM_ID_112952) - ($DPM_ID_110018 + $DPM_ID_109729)) <= 1000)
+message "DNB check v3091_m failed. Formula used: {f 19.00.a, c170} + {f 19.00.c, c180} <= {f 19.00.a, c010} + {f 19.00.b, c120}"
+
+@name("DNB Consistency Plausibility check: v3091_m_16")
+@description("DNB Consistency Plausibility check: v3091_m")
+raise DNBConsistencyPlausibilityCheckV3091M_16 severity error
+not ((($DPM_ID_148911 + $DPM_ID_112954) - ($DPM_ID_110014 + $DPM_ID_109726)) <= 1000)
+message "DNB check v3091_m failed. Formula used: {f 19.00.a, c170} + {f 19.00.c, c180} <= {f 19.00.a, c010} + {f 19.00.b, c120}"
+
+@name("DNB Consistency Plausibility check: v3091_m_17")
+@description("DNB Consistency Plausibility check: v3091_m")
+raise DNBConsistencyPlausibilityCheckV3091M_17 severity error
+not ((($DPM_ID_148913 + $DPM_ID_112953) - ($DPM_ID_110025 + $DPM_ID_109734)) <= 1000)
+message "DNB check v3091_m failed. Formula used: {f 19.00.a, c170} + {f 19.00.c, c180} <= {f 19.00.a, c010} + {f 19.00.b, c120}"
+
+@name("DNB Consistency Plausibility check: v3091_m_18")
+@description("DNB Consistency Plausibility check: v3091_m")
+raise DNBConsistencyPlausibilityCheckV3091M_18 severity error
+not ((($DPM_ID_148921 + $DPM_ID_112971) - ($DPM_ID_110225 + $DPM_ID_109837)) <= 1000)
+message "DNB check v3091_m failed. Formula used: {f 19.00.a, c170} + {f 19.00.c, c180} <= {f 19.00.a, c010} + {f 19.00.b, c120}"
+
+@name("DNB Consistency Plausibility check: v3091_m_19")
+@description("DNB Consistency Plausibility check: v3091_m")
+raise DNBConsistencyPlausibilityCheckV3091M_19 severity error
+not ((($DPM_ID_148948 + $DPM_ID_113096) - ($DPM_ID_110597 + $DPM_ID_110833)) <= 1000)
+message "DNB check v3091_m failed. Formula used: {f 19.00.a, c170} + {f 19.00.c, c180} <= {f 19.00.a, c010} + {f 19.00.b, c120}"
+
+@name("DNB Consistency Plausibility check: v3091_m_20")
+@description("DNB Consistency Plausibility check: v3091_m")
+raise DNBConsistencyPlausibilityCheckV3091M_20 severity error
+not ((($DPM_ID_148937 + $DPM_ID_113074) - ($DPM_ID_110342 + $DPM_ID_110701)) <= 1000)
+message "DNB check v3091_m failed. Formula used: {f 19.00.a, c170} + {f 19.00.c, c180} <= {f 19.00.a, c010} + {f 19.00.b, c120}"
+
+@name("DNB Consistency Plausibility check: v3091_m_21")
+@description("DNB Consistency Plausibility check: v3091_m")
+raise DNBConsistencyPlausibilityCheckV3091M_21 severity error
+not ((($DPM_ID_148941 + $DPM_ID_113082) - ($DPM_ID_110434 + $DPM_ID_110749)) <= 1000)
+message "DNB check v3091_m failed. Formula used: {f 19.00.a, c170} + {f 19.00.c, c180} <= {f 19.00.a, c010} + {f 19.00.b, c120}"
+
+@name("DNB Consistency Plausibility check: v3091_m_22")
+@description("DNB Consistency Plausibility check: v3091_m")
+raise DNBConsistencyPlausibilityCheckV3091M_22 severity error
+not ((($DPM_ID_148939 + $DPM_ID_113078) - ($DPM_ID_110388 + $DPM_ID_110725)) <= 1000)
+message "DNB check v3091_m failed. Formula used: {f 19.00.a, c170} + {f 19.00.c, c180} <= {f 19.00.a, c010} + {f 19.00.b, c120}"
+
+@name("DNB Consistency Plausibility check: v3091_m_23")
+@description("DNB Consistency Plausibility check: v3091_m")
+raise DNBConsistencyPlausibilityCheckV3091M_23 severity error
+not ((($DPM_ID_148946 + $DPM_ID_113092) - ($DPM_ID_110549 + $DPM_ID_110809)) <= 1000)
+message "DNB check v3091_m failed. Formula used: {f 19.00.a, c170} + {f 19.00.c, c180} <= {f 19.00.a, c010} + {f 19.00.b, c120}"
+
+@name("DNB Consistency Plausibility check: v3091_m_24")
+@description("DNB Consistency Plausibility check: v3091_m")
+raise DNBConsistencyPlausibilityCheckV3091M_24 severity error
+not ((($DPM_ID_148944 + $DPM_ID_113088) - ($DPM_ID_110503 + $DPM_ID_110785)) <= 1000)
+message "DNB check v3091_m failed. Formula used: {f 19.00.a, c170} + {f 19.00.c, c180} <= {f 19.00.a, c010} + {f 19.00.b, c120}"
+
+@name("DNB Consistency Plausibility check: v3091_m_25")
+@description("DNB Consistency Plausibility check: v3091_m")
+raise DNBConsistencyPlausibilityCheckV3091M_25 severity error
+not ((($DPM_ID_148950 + $DPM_ID_113098) - ($DPM_ID_110605 + $DPM_ID_110839)) <= 1000)
+message "DNB check v3091_m failed. Formula used: {f 19.00.a, c170} + {f 19.00.c, c180} <= {f 19.00.a, c010} + {f 19.00.b, c120}"
+
+@name("DNB Consistency Plausibility check: v3091_m_26")
+@description("DNB Consistency Plausibility check: v3091_m")
+raise DNBConsistencyPlausibilityCheckV3091M_26 severity error
+not ((($DPM_ID_148938 + $DPM_ID_113075) - ($DPM_ID_110346 + $DPM_ID_110704)) <= 1000)
+message "DNB check v3091_m failed. Formula used: {f 19.00.a, c170} + {f 19.00.c, c180} <= {f 19.00.a, c010} + {f 19.00.b, c120}"
+
+@name("DNB Consistency Plausibility check: v3091_m_27")
+@description("DNB Consistency Plausibility check: v3091_m")
+raise DNBConsistencyPlausibilityCheckV3091M_27 severity error
+not ((($DPM_ID_148942 + $DPM_ID_113083) - ($DPM_ID_110438 + $DPM_ID_110752)) <= 1000)
+message "DNB check v3091_m failed. Formula used: {f 19.00.a, c170} + {f 19.00.c, c180} <= {f 19.00.a, c010} + {f 19.00.b, c120}"
+
+@name("DNB Consistency Plausibility check: v3091_m_28")
+@description("DNB Consistency Plausibility check: v3091_m")
+raise DNBConsistencyPlausibilityCheckV3091M_28 severity error
+not ((($DPM_ID_148940 + $DPM_ID_113079) - ($DPM_ID_110392 + $DPM_ID_110728)) <= 1000)
+message "DNB check v3091_m failed. Formula used: {f 19.00.a, c170} + {f 19.00.c, c180} <= {f 19.00.a, c010} + {f 19.00.b, c120}"
+
+@name("DNB Consistency Plausibility check: v3091_m_29")
+@description("DNB Consistency Plausibility check: v3091_m")
+raise DNBConsistencyPlausibilityCheckV3091M_29 severity error
+not ((($DPM_ID_148947 + $DPM_ID_113093) - ($DPM_ID_110553 + $DPM_ID_110812)) <= 1000)
+message "DNB check v3091_m failed. Formula used: {f 19.00.a, c170} + {f 19.00.c, c180} <= {f 19.00.a, c010} + {f 19.00.b, c120}"
+
+@name("DNB Consistency Plausibility check: v3091_m_30")
+@description("DNB Consistency Plausibility check: v3091_m")
+raise DNBConsistencyPlausibilityCheckV3091M_30 severity error
+not ((($DPM_ID_148945 + $DPM_ID_113089) - ($DPM_ID_110507 + $DPM_ID_110788)) <= 1000)
+message "DNB check v3091_m failed. Formula used: {f 19.00.a, c170} + {f 19.00.c, c180} <= {f 19.00.a, c010} + {f 19.00.b, c120}"
+
+@name("DNB Consistency Plausibility check: v3091_m_31")
+@description("DNB Consistency Plausibility check: v3091_m")
+raise DNBConsistencyPlausibilityCheckV3091M_31 severity error
+not ((($DPM_ID_148943 + $DPM_ID_113086) - ($DPM_ID_110478 + $DPM_ID_110773)) <= 1000)
+message "DNB check v3091_m failed. Formula used: {f 19.00.a, c170} + {f 19.00.c, c180} <= {f 19.00.a, c010} + {f 19.00.b, c120}"
+
+@name("DNB Consistency Plausibility check: v3091_m_32")
+@description("DNB Consistency Plausibility check: v3091_m")
+raise DNBConsistencyPlausibilityCheckV3091M_32 severity error
+not ((($DPM_ID_148949 + $DPM_ID_113097) - ($DPM_ID_110601 + $DPM_ID_110836)) <= 1000)
+message "DNB check v3091_m failed. Formula used: {f 19.00.a, c170} + {f 19.00.c, c180} <= {f 19.00.a, c010} + {f 19.00.b, c120}"
+
+@name("DNB Consistency Plausibility check: v3091_m_33")
+@description("DNB Consistency Plausibility check: v3091_m")
+raise DNBConsistencyPlausibilityCheckV3091M_33 severity error
+not ((($DPM_ID_148952 + $DPM_ID_113109) - ($DPM_ID_110871 + $DPM_ID_110894)) <= 1000)
+message "DNB check v3091_m failed. Formula used: {f 19.00.a, c170} + {f 19.00.c, c180} <= {f 19.00.a, c010} + {f 19.00.b, c120}"
+
+@name("DNB Consistency Plausibility check: DNB_0022_1")
+@description("DNB Consistency Plausibility check: DNB_0022")
+raise DNBConsistencyPlausibilityCheckDNB0022_1 severity error
+not (if $DPM_ID_118798 == 1    (($DPM_ID_51027) - ($DPM_ID_51200))::abs < 1000 else true)
+message "DNB check DNB_0022 failed. Formula used: if {r010} = 1 then {r030} = {r040}"
+
+@name("DNB Consistency Plausibility check: DNB_0022_2")
+@description("DNB Consistency Plausibility check: DNB_0022")
+raise DNBConsistencyPlausibilityCheckDNB0022_2 severity error
+not (if $DPM_ID_118797 == 1    (($DPM_ID_51026) - ($DPM_ID_51199))::abs < 1000 else true)
+message "DNB check DNB_0022 failed. Formula used: if {r010} = 1 then {r030} = {r040}"
+
+@name("DNB Consistency Plausibility check: DNB_0022_3")
+@description("DNB Consistency Plausibility check: DNB_0022")
+raise DNBConsistencyPlausibilityCheckDNB0022_3 severity error
+not (if $DPM_ID_118795 == 1    (($DPM_ID_51024) - ($DPM_ID_51197))::abs < 1000 else true)
+message "DNB check DNB_0022 failed. Formula used: if {r010} = 1 then {r030} = {r040}"
+
+@name("DNB Consistency Plausibility check: DNB_0022_4")
+@description("DNB Consistency Plausibility check: DNB_0022")
+raise DNBConsistencyPlausibilityCheckDNB0022_4 severity error
+not (if $DPM_ID_118793 == 1    (($DPM_ID_51022) - ($DPM_ID_51195))::abs < 1000 else true)
+message "DNB check DNB_0022 failed. Formula used: if {r010} = 1 then {r030} = {r040}"
+
+@name("DNB Consistency Plausibility check: DNB_0022_5")
+@description("DNB Consistency Plausibility check: DNB_0022")
+raise DNBConsistencyPlausibilityCheckDNB0022_5 severity error
+not (if $DPM_ID_118794 == 1    (($DPM_ID_51023) - ($DPM_ID_51196))::abs < 1000 else true)
+message "DNB check DNB_0022 failed. Formula used: if {r010} = 1 then {r030} = {r040}"
+
+@name("DNB Consistency Plausibility check: DNB_0022_6")
+@description("DNB Consistency Plausibility check: DNB_0022")
+raise DNBConsistencyPlausibilityCheckDNB0022_6 severity error
+not (if $DPM_ID_118792 == 1    (($DPM_ID_51021) - ($DPM_ID_51194))::abs < 1000 else true)
+message "DNB check DNB_0022 failed. Formula used: if {r010} = 1 then {r030} = {r040}"
+
+@name("DNB Consistency Plausibility check: DNB_0022_7")
+@description("DNB Consistency Plausibility check: DNB_0022")
+raise DNBConsistencyPlausibilityCheckDNB0022_7 severity error
+not (if $DPM_ID_118796 == 1    (($DPM_ID_51025) - ($DPM_ID_51198))::abs < 1000 else true)
+message "DNB check DNB_0022 failed. Formula used: if {r010} = 1 then {r030} = {r040}"
+
+@name("DNB Consistency Plausibility check: DNB_0022_8")
+@description("DNB Consistency Plausibility check: DNB_0022")
+raise DNBConsistencyPlausibilityCheckDNB0022_8 severity error
+not (if $DPM_ID_118799 == 1    (($DPM_ID_51396) - ($DPM_ID_51416))::abs < 1000 else true)
+message "DNB check DNB_0022 failed. Formula used: if {r010} = 1 then {r030} = {r040}"
+
+@name("DNB Consistency Plausibility check: DNB_0023_1")
+@description("DNB Consistency Plausibility check: DNB_0023")
+raise DNBConsistencyPlausibilityCheckDNB0023_1 severity error
+not (if $DPM_ID_118838 == 1    (($DPM_ID_51067) - ($DPM_ID_51240))::abs < 1000 else true)
+message "DNB check DNB_0023 failed. Formula used: if {r110} = 1 then {r130} = {r140}"
+
+@name("DNB Consistency Plausibility check: DNB_0023_2")
+@description("DNB Consistency Plausibility check: DNB_0023")
+raise DNBConsistencyPlausibilityCheckDNB0023_2 severity error
+not (if $DPM_ID_118837 == 1    (($DPM_ID_51066) - ($DPM_ID_51239))::abs < 1000 else true)
+message "DNB check DNB_0023 failed. Formula used: if {r110} = 1 then {r130} = {r140}"
+
+@name("DNB Consistency Plausibility check: DNB_0023_3")
+@description("DNB Consistency Plausibility check: DNB_0023")
+raise DNBConsistencyPlausibilityCheckDNB0023_3 severity error
+not (if $DPM_ID_118835 == 1    (($DPM_ID_51064) - ($DPM_ID_51237))::abs < 1000 else true)
+message "DNB check DNB_0023 failed. Formula used: if {r110} = 1 then {r130} = {r140}"
+
+@name("DNB Consistency Plausibility check: DNB_0023_4")
+@description("DNB Consistency Plausibility check: DNB_0023")
+raise DNBConsistencyPlausibilityCheckDNB0023_4 severity error
+not (if $DPM_ID_118833 == 1    (($DPM_ID_51062) - ($DPM_ID_51235))::abs < 1000 else true)
+message "DNB check DNB_0023 failed. Formula used: if {r110} = 1 then {r130} = {r140}"
+
+@name("DNB Consistency Plausibility check: DNB_0023_5")
+@description("DNB Consistency Plausibility check: DNB_0023")
+raise DNBConsistencyPlausibilityCheckDNB0023_5 severity error
+not (if $DPM_ID_118834 == 1    (($DPM_ID_51063) - ($DPM_ID_51236))::abs < 1000 else true)
+message "DNB check DNB_0023 failed. Formula used: if {r110} = 1 then {r130} = {r140}"
+
+@name("DNB Consistency Plausibility check: DNB_0023_6")
+@description("DNB Consistency Plausibility check: DNB_0023")
+raise DNBConsistencyPlausibilityCheckDNB0023_6 severity error
+not (if $DPM_ID_118832 == 1    (($DPM_ID_51061) - ($DPM_ID_51234))::abs < 1000 else true)
+message "DNB check DNB_0023 failed. Formula used: if {r110} = 1 then {r130} = {r140}"
+
+@name("DNB Consistency Plausibility check: DNB_0023_7")
+@description("DNB Consistency Plausibility check: DNB_0023")
+raise DNBConsistencyPlausibilityCheckDNB0023_7 severity error
+not (if $DPM_ID_118836 == 1    (($DPM_ID_51065) - ($DPM_ID_51238))::abs < 1000 else true)
+message "DNB check DNB_0023 failed. Formula used: if {r110} = 1 then {r130} = {r140}"
+
+@name("DNB Consistency Plausibility check: DNB_0023_8")
+@description("DNB Consistency Plausibility check: DNB_0023")
+raise DNBConsistencyPlausibilityCheckDNB0023_8 severity error
+not (if $DPM_ID_118839 == 1    (($DPM_ID_51401) - ($DPM_ID_51421))::abs < 1000 else true)
+message "DNB check DNB_0023 failed. Formula used: if {r110} = 1 then {r130} = {r140}"
+
+@name("DNB Consistency Plausibility check: DNB_0024_1")
+@description("DNB Consistency Plausibility check: DNB_0024")
+raise DNBConsistencyPlausibilityCheckDNB0024_1 severity error
+not (if $DPM_ID_118830 == 1    (($DPM_ID_51059) - ($DPM_ID_51232))::abs < 1000 else true)
+message "DNB check DNB_0024 failed. Formula used: if {r210} = 1 then {r230} = {r240}"
+
+@name("DNB Consistency Plausibility check: DNB_0024_2")
+@description("DNB Consistency Plausibility check: DNB_0024")
+raise DNBConsistencyPlausibilityCheckDNB0024_2 severity error
+not (if $DPM_ID_118829 == 1    (($DPM_ID_51058) - ($DPM_ID_51231))::abs < 1000 else true)
+message "DNB check DNB_0024 failed. Formula used: if {r210} = 1 then {r230} = {r240}"
+
+@name("DNB Consistency Plausibility check: DNB_0024_3")
+@description("DNB Consistency Plausibility check: DNB_0024")
+raise DNBConsistencyPlausibilityCheckDNB0024_3 severity error
+not (if $DPM_ID_118827 == 1    (($DPM_ID_51056) - ($DPM_ID_51229))::abs < 1000 else true)
+message "DNB check DNB_0024 failed. Formula used: if {r210} = 1 then {r230} = {r240}"
+
+@name("DNB Consistency Plausibility check: DNB_0024_4")
+@description("DNB Consistency Plausibility check: DNB_0024")
+raise DNBConsistencyPlausibilityCheckDNB0024_4 severity error
+not (if $DPM_ID_118825 == 1    (($DPM_ID_51054) - ($DPM_ID_51227))::abs < 1000 else true)
+message "DNB check DNB_0024 failed. Formula used: if {r210} = 1 then {r230} = {r240}"
+
+@name("DNB Consistency Plausibility check: DNB_0024_5")
+@description("DNB Consistency Plausibility check: DNB_0024")
+raise DNBConsistencyPlausibilityCheckDNB0024_5 severity error
+not (if $DPM_ID_118826 == 1    (($DPM_ID_51055) - ($DPM_ID_51228))::abs < 1000 else true)
+message "DNB check DNB_0024 failed. Formula used: if {r210} = 1 then {r230} = {r240}"
+
+@name("DNB Consistency Plausibility check: DNB_0024_6")
+@description("DNB Consistency Plausibility check: DNB_0024")
+raise DNBConsistencyPlausibilityCheckDNB0024_6 severity error
+not (if $DPM_ID_118824 == 1    (($DPM_ID_51053) - ($DPM_ID_51226))::abs < 1000 else true)
+message "DNB check DNB_0024 failed. Formula used: if {r210} = 1 then {r230} = {r240}"
+
+@name("DNB Consistency Plausibility check: DNB_0024_7")
+@description("DNB Consistency Plausibility check: DNB_0024")
+raise DNBConsistencyPlausibilityCheckDNB0024_7 severity error
+not (if $DPM_ID_118828 == 1    (($DPM_ID_51057) - ($DPM_ID_51230))::abs < 1000 else true)
+message "DNB check DNB_0024 failed. Formula used: if {r210} = 1 then {r230} = {r240}"
+
+@name("DNB Consistency Plausibility check: DNB_0024_8")
+@description("DNB Consistency Plausibility check: DNB_0024")
+raise DNBConsistencyPlausibilityCheckDNB0024_8 severity error
+not (if $DPM_ID_118831 == 1    (($DPM_ID_51400) - ($DPM_ID_51420))::abs < 1000 else true)
+message "DNB check DNB_0024 failed. Formula used: if {r210} = 1 then {r230} = {r240}"
+
+@name("DNB Consistency Plausibility check: DNB_0025_1")
+@description("DNB Consistency Plausibility check: DNB_0025")
+raise DNBConsistencyPlausibilityCheckDNB0025_1 severity error
+not (if $DPM_ID_118790 == 1    (($DPM_ID_51019) - ($DPM_ID_51192))::abs < 1000 else true)
+message "DNB check DNB_0025 failed. Formula used: if {r310} = 1 then {r330} = {r340}"
+
+@name("DNB Consistency Plausibility check: DNB_0025_2")
+@description("DNB Consistency Plausibility check: DNB_0025")
+raise DNBConsistencyPlausibilityCheckDNB0025_2 severity error
+not (if $DPM_ID_118789 == 1    (($DPM_ID_51018) - ($DPM_ID_51191))::abs < 1000 else true)
+message "DNB check DNB_0025 failed. Formula used: if {r310} = 1 then {r330} = {r340}"
+
+@name("DNB Consistency Plausibility check: DNB_0025_3")
+@description("DNB Consistency Plausibility check: DNB_0025")
+raise DNBConsistencyPlausibilityCheckDNB0025_3 severity error
+not (if $DPM_ID_118787 == 1    (($DPM_ID_51016) - ($DPM_ID_51189))::abs < 1000 else true)
+message "DNB check DNB_0025 failed. Formula used: if {r310} = 1 then {r330} = {r340}"
+
+@name("DNB Consistency Plausibility check: DNB_0025_4")
+@description("DNB Consistency Plausibility check: DNB_0025")
+raise DNBConsistencyPlausibilityCheckDNB0025_4 severity error
+not (if $DPM_ID_118785 == 1    (($DPM_ID_51014) - ($DPM_ID_51187))::abs < 1000 else true)
+message "DNB check DNB_0025 failed. Formula used: if {r310} = 1 then {r330} = {r340}"
+
+@name("DNB Consistency Plausibility check: DNB_0025_5")
+@description("DNB Consistency Plausibility check: DNB_0025")
+raise DNBConsistencyPlausibilityCheckDNB0025_5 severity error
+not (if $DPM_ID_118786 == 1    (($DPM_ID_51015) - ($DPM_ID_51188))::abs < 1000 else true)
+message "DNB check DNB_0025 failed. Formula used: if {r310} = 1 then {r330} = {r340}"
+
+@name("DNB Consistency Plausibility check: DNB_0025_6")
+@description("DNB Consistency Plausibility check: DNB_0025")
+raise DNBConsistencyPlausibilityCheckDNB0025_6 severity error
+not (if $DPM_ID_118784 == 1    (($DPM_ID_51013) - ($DPM_ID_51186))::abs < 1000 else true)
+message "DNB check DNB_0025 failed. Formula used: if {r310} = 1 then {r330} = {r340}"
+
+@name("DNB Consistency Plausibility check: DNB_0025_7")
+@description("DNB Consistency Plausibility check: DNB_0025")
+raise DNBConsistencyPlausibilityCheckDNB0025_7 severity error
+not (if $DPM_ID_118788 == 1    (($DPM_ID_51017) - ($DPM_ID_51190))::abs < 1000 else true)
+message "DNB check DNB_0025 failed. Formula used: if {r310} = 1 then {r330} = {r340}"
+
+@name("DNB Consistency Plausibility check: DNB_0025_8")
+@description("DNB Consistency Plausibility check: DNB_0025")
+raise DNBConsistencyPlausibilityCheckDNB0025_8 severity error
+not (if $DPM_ID_118791 == 1    (($DPM_ID_51395) - ($DPM_ID_51415))::abs < 1000 else true)
+message "DNB check DNB_0025 failed. Formula used: if {r310} = 1 then {r330} = {r340}"
+
+@name("DNB Consistency Plausibility check: DNB_0026_1")
+@description("DNB Consistency Plausibility check: DNB_0026")
+raise DNBConsistencyPlausibilityCheckDNB0026_1 severity error
+not (if $DPM_ID_118822 == 1    (($DPM_ID_51051) - ($DPM_ID_51224))::abs < 1000 else true)
+message "DNB check DNB_0026 failed. Formula used: if {r410} = 1 then {r430} = {r440}"
+
+@name("DNB Consistency Plausibility check: DNB_0026_2")
+@description("DNB Consistency Plausibility check: DNB_0026")
+raise DNBConsistencyPlausibilityCheckDNB0026_2 severity error
+not (if $DPM_ID_118821 == 1    (($DPM_ID_51050) - ($DPM_ID_51223))::abs < 1000 else true)
+message "DNB check DNB_0026 failed. Formula used: if {r410} = 1 then {r430} = {r440}"
+
+@name("DNB Consistency Plausibility check: DNB_0026_3")
+@description("DNB Consistency Plausibility check: DNB_0026")
+raise DNBConsistencyPlausibilityCheckDNB0026_3 severity error
+not (if $DPM_ID_118819 == 1    (($DPM_ID_51048) - ($DPM_ID_51221))::abs < 1000 else true)
+message "DNB check DNB_0026 failed. Formula used: if {r410} = 1 then {r430} = {r440}"
+
+@name("DNB Consistency Plausibility check: DNB_0026_4")
+@description("DNB Consistency Plausibility check: DNB_0026")
+raise DNBConsistencyPlausibilityCheckDNB0026_4 severity error
+not (if $DPM_ID_118817 == 1    (($DPM_ID_51046) - ($DPM_ID_51219))::abs < 1000 else true)
+message "DNB check DNB_0026 failed. Formula used: if {r410} = 1 then {r430} = {r440}"
+
+@name("DNB Consistency Plausibility check: DNB_0026_5")
+@description("DNB Consistency Plausibility check: DNB_0026")
+raise DNBConsistencyPlausibilityCheckDNB0026_5 severity error
+not (if $DPM_ID_118818 == 1    (($DPM_ID_51047) - ($DPM_ID_51220))::abs < 1000 else true)
+message "DNB check DNB_0026 failed. Formula used: if {r410} = 1 then {r430} = {r440}"
+
+@name("DNB Consistency Plausibility check: DNB_0026_6")
+@description("DNB Consistency Plausibility check: DNB_0026")
+raise DNBConsistencyPlausibilityCheckDNB0026_6 severity error
+not (if $DPM_ID_118816 == 1    (($DPM_ID_51045) - ($DPM_ID_51218))::abs < 1000 else true)
+message "DNB check DNB_0026 failed. Formula used: if {r410} = 1 then {r430} = {r440}"
+
+@name("DNB Consistency Plausibility check: DNB_0026_7")
+@description("DNB Consistency Plausibility check: DNB_0026")
+raise DNBConsistencyPlausibilityCheckDNB0026_7 severity error
+not (if $DPM_ID_118820 == 1    (($DPM_ID_51049) - ($DPM_ID_51222))::abs < 1000 else true)
+message "DNB check DNB_0026 failed. Formula used: if {r410} = 1 then {r430} = {r440}"
+
+@name("DNB Consistency Plausibility check: DNB_0026_8")
+@description("DNB Consistency Plausibility check: DNB_0026")
+raise DNBConsistencyPlausibilityCheckDNB0026_8 severity error
+not (if $DPM_ID_118823 == 1    (($DPM_ID_51399) - ($DPM_ID_51419))::abs < 1000 else true)
+message "DNB check DNB_0026 failed. Formula used: if {r410} = 1 then {r430} = {r440}"
+
+@name("DNB Consistency Plausibility check: DNB_0027_1")
+@description("DNB Consistency Plausibility check: DNB_0027")
+raise DNBConsistencyPlausibilityCheckDNB0027_1 severity error
+not (if $DPM_ID_118814 == 1    (($DPM_ID_51043) - ($DPM_ID_51216))::abs < 1000 else true)
+message "DNB check DNB_0027 failed. Formula used: if {r510} = 1 then {r530} = {r540}"
+
+@name("DNB Consistency Plausibility check: DNB_0027_2")
+@description("DNB Consistency Plausibility check: DNB_0027")
+raise DNBConsistencyPlausibilityCheckDNB0027_2 severity error
+not (if $DPM_ID_118813 == 1    (($DPM_ID_51042) - ($DPM_ID_51215))::abs < 1000 else true)
+message "DNB check DNB_0027 failed. Formula used: if {r510} = 1 then {r530} = {r540}"
+
+@name("DNB Consistency Plausibility check: DNB_0027_3")
+@description("DNB Consistency Plausibility check: DNB_0027")
+raise DNBConsistencyPlausibilityCheckDNB0027_3 severity error
+not (if $DPM_ID_118811 == 1    (($DPM_ID_51040) - ($DPM_ID_51213))::abs < 1000 else true)
+message "DNB check DNB_0027 failed. Formula used: if {r510} = 1 then {r530} = {r540}"
+
+@name("DNB Consistency Plausibility check: DNB_0027_4")
+@description("DNB Consistency Plausibility check: DNB_0027")
+raise DNBConsistencyPlausibilityCheckDNB0027_4 severity error
+not (if $DPM_ID_118809 == 1    (($DPM_ID_51038) - ($DPM_ID_51211))::abs < 1000 else true)
+message "DNB check DNB_0027 failed. Formula used: if {r510} = 1 then {r530} = {r540}"
+
+@name("DNB Consistency Plausibility check: DNB_0027_5")
+@description("DNB Consistency Plausibility check: DNB_0027")
+raise DNBConsistencyPlausibilityCheckDNB0027_5 severity error
+not (if $DPM_ID_118810 == 1    (($DPM_ID_51039) - ($DPM_ID_51212))::abs < 1000 else true)
+message "DNB check DNB_0027 failed. Formula used: if {r510} = 1 then {r530} = {r540}"
+
+@name("DNB Consistency Plausibility check: DNB_0027_6")
+@description("DNB Consistency Plausibility check: DNB_0027")
+raise DNBConsistencyPlausibilityCheckDNB0027_6 severity error
+not (if $DPM_ID_118808 == 1    (($DPM_ID_51037) - ($DPM_ID_51210))::abs < 1000 else true)
+message "DNB check DNB_0027 failed. Formula used: if {r510} = 1 then {r530} = {r540}"
+
+@name("DNB Consistency Plausibility check: DNB_0027_7")
+@description("DNB Consistency Plausibility check: DNB_0027")
+raise DNBConsistencyPlausibilityCheckDNB0027_7 severity error
+not (if $DPM_ID_118812 == 1    (($DPM_ID_51041) - ($DPM_ID_51214))::abs < 1000 else true)
+message "DNB check DNB_0027 failed. Formula used: if {r510} = 1 then {r530} = {r540}"
+
+@name("DNB Consistency Plausibility check: DNB_0027_8")
+@description("DNB Consistency Plausibility check: DNB_0027")
+raise DNBConsistencyPlausibilityCheckDNB0027_8 severity error
+not (if $DPM_ID_118815 == 1    (($DPM_ID_51398) - ($DPM_ID_51418))::abs < 1000 else true)
+message "DNB check DNB_0027 failed. Formula used: if {r510} = 1 then {r530} = {r540}"
+
+@name("DNB Consistency Plausibility check: DNB_0028_1")
+@description("DNB Consistency Plausibility check: DNB_0028")
+raise DNBConsistencyPlausibilityCheckDNB0028_1 severity error
+not (if $DPM_ID_118774 == 1    (($DPM_ID_51003) - ($DPM_ID_51176))::abs < 1000 else true)
+message "DNB check DNB_0028 failed. Formula used: if {r610} = 1 then {r630} = {r640}"
+
+@name("DNB Consistency Plausibility check: DNB_0028_2")
+@description("DNB Consistency Plausibility check: DNB_0028")
+raise DNBConsistencyPlausibilityCheckDNB0028_2 severity error
+not (if $DPM_ID_118773 == 1    (($DPM_ID_51002) - ($DPM_ID_51175))::abs < 1000 else true)
+message "DNB check DNB_0028 failed. Formula used: if {r610} = 1 then {r630} = {r640}"
+
+@name("DNB Consistency Plausibility check: DNB_0028_3")
+@description("DNB Consistency Plausibility check: DNB_0028")
+raise DNBConsistencyPlausibilityCheckDNB0028_3 severity error
+not (if $DPM_ID_118771 == 1    (($DPM_ID_51000) - ($DPM_ID_51173))::abs < 1000 else true)
+message "DNB check DNB_0028 failed. Formula used: if {r610} = 1 then {r630} = {r640}"
+
+@name("DNB Consistency Plausibility check: DNB_0028_4")
+@description("DNB Consistency Plausibility check: DNB_0028")
+raise DNBConsistencyPlausibilityCheckDNB0028_4 severity error
+not (if $DPM_ID_118769 == 1    (($DPM_ID_50998) - ($DPM_ID_51171))::abs < 1000 else true)
+message "DNB check DNB_0028 failed. Formula used: if {r610} = 1 then {r630} = {r640}"
+
+@name("DNB Consistency Plausibility check: DNB_0028_5")
+@description("DNB Consistency Plausibility check: DNB_0028")
+raise DNBConsistencyPlausibilityCheckDNB0028_5 severity error
+not (if $DPM_ID_118770 == 1    (($DPM_ID_50999) - ($DPM_ID_51172))::abs < 1000 else true)
+message "DNB check DNB_0028 failed. Formula used: if {r610} = 1 then {r630} = {r640}"
+
+@name("DNB Consistency Plausibility check: DNB_0028_6")
+@description("DNB Consistency Plausibility check: DNB_0028")
+raise DNBConsistencyPlausibilityCheckDNB0028_6 severity error
+not (if $DPM_ID_118768 == 1    (($DPM_ID_50997) - ($DPM_ID_51170))::abs < 1000 else true)
+message "DNB check DNB_0028 failed. Formula used: if {r610} = 1 then {r630} = {r640}"
+
+@name("DNB Consistency Plausibility check: DNB_0028_7")
+@description("DNB Consistency Plausibility check: DNB_0028")
+raise DNBConsistencyPlausibilityCheckDNB0028_7 severity error
+not (if $DPM_ID_118772 == 1    (($DPM_ID_51001) - ($DPM_ID_51174))::abs < 1000 else true)
+message "DNB check DNB_0028 failed. Formula used: if {r610} = 1 then {r630} = {r640}"
+
+@name("DNB Consistency Plausibility check: DNB_0028_8")
+@description("DNB Consistency Plausibility check: DNB_0028")
+raise DNBConsistencyPlausibilityCheckDNB0028_8 severity error
+not (if $DPM_ID_118775 == 1    (($DPM_ID_51393) - ($DPM_ID_51413))::abs < 1000 else true)
+message "DNB check DNB_0028 failed. Formula used: if {r610} = 1 then {r630} = {r640}"
+
+@name("DNB Consistency Plausibility check: DNB_0029_1")
+@description("DNB Consistency Plausibility check: DNB_0029")
+raise DNBConsistencyPlausibilityCheckDNB0029_1 severity error
+not (if $DPM_ID_118782 == 1    (($DPM_ID_51011) - ($DPM_ID_51184))::abs < 1000 else true)
+message "DNB check DNB_0029 failed. Formula used: if {r710} = 1 then {r730} = {r740}"
+
+@name("DNB Consistency Plausibility check: DNB_0029_2")
+@description("DNB Consistency Plausibility check: DNB_0029")
+raise DNBConsistencyPlausibilityCheckDNB0029_2 severity error
+not (if $DPM_ID_118781 == 1    (($DPM_ID_51010) - ($DPM_ID_51183))::abs < 1000 else true)
+message "DNB check DNB_0029 failed. Formula used: if {r710} = 1 then {r730} = {r740}"
+
+@name("DNB Consistency Plausibility check: DNB_0029_3")
+@description("DNB Consistency Plausibility check: DNB_0029")
+raise DNBConsistencyPlausibilityCheckDNB0029_3 severity error
+not (if $DPM_ID_118779 == 1    (($DPM_ID_51008) - ($DPM_ID_51181))::abs < 1000 else true)
+message "DNB check DNB_0029 failed. Formula used: if {r710} = 1 then {r730} = {r740}"
+
+@name("DNB Consistency Plausibility check: DNB_0029_4")
+@description("DNB Consistency Plausibility check: DNB_0029")
+raise DNBConsistencyPlausibilityCheckDNB0029_4 severity error
+not (if $DPM_ID_118777 == 1    (($DPM_ID_51006) - ($DPM_ID_51179))::abs < 1000 else true)
+message "DNB check DNB_0029 failed. Formula used: if {r710} = 1 then {r730} = {r740}"
+
+@name("DNB Consistency Plausibility check: DNB_0029_5")
+@description("DNB Consistency Plausibility check: DNB_0029")
+raise DNBConsistencyPlausibilityCheckDNB0029_5 severity error
+not (if $DPM_ID_118778 == 1    (($DPM_ID_51007) - ($DPM_ID_51180))::abs < 1000 else true)
+message "DNB check DNB_0029 failed. Formula used: if {r710} = 1 then {r730} = {r740}"
+
+@name("DNB Consistency Plausibility check: DNB_0029_6")
+@description("DNB Consistency Plausibility check: DNB_0029")
+raise DNBConsistencyPlausibilityCheckDNB0029_6 severity error
+not (if $DPM_ID_118776 == 1    (($DPM_ID_51005) - ($DPM_ID_51178))::abs < 1000 else true)
+message "DNB check DNB_0029 failed. Formula used: if {r710} = 1 then {r730} = {r740}"
+
+@name("DNB Consistency Plausibility check: DNB_0029_7")
+@description("DNB Consistency Plausibility check: DNB_0029")
+raise DNBConsistencyPlausibilityCheckDNB0029_7 severity error
+not (if $DPM_ID_118780 == 1    (($DPM_ID_51009) - ($DPM_ID_51182))::abs < 1000 else true)
+message "DNB check DNB_0029 failed. Formula used: if {r710} = 1 then {r730} = {r740}"
+
+@name("DNB Consistency Plausibility check: DNB_0029_8")
+@description("DNB Consistency Plausibility check: DNB_0029")
+raise DNBConsistencyPlausibilityCheckDNB0029_8 severity error
+not (if $DPM_ID_118783 == 1    (($DPM_ID_51394) - ($DPM_ID_51414))::abs < 1000 else true)
+message "DNB check DNB_0029 failed. Formula used: if {r710} = 1 then {r730} = {r740}"
+
+@name("DNB Consistency Plausibility check: DNB_0030_1")
+@description("DNB Consistency Plausibility check: DNB_0030")
+raise DNBConsistencyPlausibilityCheckDNB0030_1 severity error
+not (if $DPM_ID_118806 == 1    (($DPM_ID_51035) - ($DPM_ID_51208))::abs < 1000 else true)
+message "DNB check DNB_0030 failed. Formula used: if {r810} = 1 then {r830} = {r840}"
+
+@name("DNB Consistency Plausibility check: DNB_0030_2")
+@description("DNB Consistency Plausibility check: DNB_0030")
+raise DNBConsistencyPlausibilityCheckDNB0030_2 severity error
+not (if $DPM_ID_118805 == 1    (($DPM_ID_51034) - ($DPM_ID_51207))::abs < 1000 else true)
+message "DNB check DNB_0030 failed. Formula used: if {r810} = 1 then {r830} = {r840}"
+
+@name("DNB Consistency Plausibility check: DNB_0030_3")
+@description("DNB Consistency Plausibility check: DNB_0030")
+raise DNBConsistencyPlausibilityCheckDNB0030_3 severity error
+not (if $DPM_ID_118803 == 1    (($DPM_ID_51032) - ($DPM_ID_51205))::abs < 1000 else true)
+message "DNB check DNB_0030 failed. Formula used: if {r810} = 1 then {r830} = {r840}"
+
+@name("DNB Consistency Plausibility check: DNB_0030_4")
+@description("DNB Consistency Plausibility check: DNB_0030")
+raise DNBConsistencyPlausibilityCheckDNB0030_4 severity error
+not (if $DPM_ID_118801 == 1    (($DPM_ID_51030) - ($DPM_ID_51203))::abs < 1000 else true)
+message "DNB check DNB_0030 failed. Formula used: if {r810} = 1 then {r830} = {r840}"
+
+@name("DNB Consistency Plausibility check: DNB_0030_5")
+@description("DNB Consistency Plausibility check: DNB_0030")
+raise DNBConsistencyPlausibilityCheckDNB0030_5 severity error
+not (if $DPM_ID_118802 == 1    (($DPM_ID_51031) - ($DPM_ID_51204))::abs < 1000 else true)
+message "DNB check DNB_0030 failed. Formula used: if {r810} = 1 then {r830} = {r840}"
+
+@name("DNB Consistency Plausibility check: DNB_0030_6")
+@description("DNB Consistency Plausibility check: DNB_0030")
+raise DNBConsistencyPlausibilityCheckDNB0030_6 severity error
+not (if $DPM_ID_118800 == 1    (($DPM_ID_51029) - ($DPM_ID_51202))::abs < 1000 else true)
+message "DNB check DNB_0030 failed. Formula used: if {r810} = 1 then {r830} = {r840}"
+
+@name("DNB Consistency Plausibility check: DNB_0030_7")
+@description("DNB Consistency Plausibility check: DNB_0030")
+raise DNBConsistencyPlausibilityCheckDNB0030_7 severity error
+not (if $DPM_ID_118804 == 1    (($DPM_ID_51033) - ($DPM_ID_51206))::abs < 1000 else true)
+message "DNB check DNB_0030 failed. Formula used: if {r810} = 1 then {r830} = {r840}"
+
+@name("DNB Consistency Plausibility check: DNB_0030_8")
+@description("DNB Consistency Plausibility check: DNB_0030")
+raise DNBConsistencyPlausibilityCheckDNB0030_8 severity error
+not (if $DPM_ID_118807 == 1    (($DPM_ID_51397) - ($DPM_ID_51417))::abs < 1000 else true)
+message "DNB check DNB_0030 failed. Formula used: if {r810} = 1 then {r830} = {r840}"
+
+@name("DNB Consistency Plausibility check: DNB_0031_1")
+@description("DNB Consistency Plausibility check: DNB_0031")
+raise DNBConsistencyPlausibilityCheckDNB0031_1 severity error
+not (if $DPM_ID_118870 == 1    (($DPM_ID_51075) - ($DPM_ID_51248))::abs < 1000 else true)
+message "DNB check DNB_0031 failed. Formula used: if {r910} = 1 then {r930} = {r940}"
+
+@name("DNB Consistency Plausibility check: DNB_0031_2")
+@description("DNB Consistency Plausibility check: DNB_0031")
+raise DNBConsistencyPlausibilityCheckDNB0031_2 severity error
+not (if $DPM_ID_118865 == 1    (($DPM_ID_51074) - ($DPM_ID_51247))::abs < 1000 else true)
+message "DNB check DNB_0031 failed. Formula used: if {r910} = 1 then {r930} = {r940}"
+
+@name("DNB Consistency Plausibility check: DNB_0031_3")
+@description("DNB Consistency Plausibility check: DNB_0031")
+raise DNBConsistencyPlausibilityCheckDNB0031_3 severity error
+not (if $DPM_ID_118855 == 1    (($DPM_ID_51072) - ($DPM_ID_51245))::abs < 1000 else true)
+message "DNB check DNB_0031 failed. Formula used: if {r910} = 1 then {r930} = {r940}"
+
+@name("DNB Consistency Plausibility check: DNB_0031_4")
+@description("DNB Consistency Plausibility check: DNB_0031")
+raise DNBConsistencyPlausibilityCheckDNB0031_4 severity error
+not (if $DPM_ID_118845 == 1    (($DPM_ID_51070) - ($DPM_ID_51243))::abs < 1000 else true)
+message "DNB check DNB_0031 failed. Formula used: if {r910} = 1 then {r930} = {r940}"
+
+@name("DNB Consistency Plausibility check: DNB_0031_5")
+@description("DNB Consistency Plausibility check: DNB_0031")
+raise DNBConsistencyPlausibilityCheckDNB0031_5 severity error
+not (if $DPM_ID_118850 == 1    (($DPM_ID_51071) - ($DPM_ID_51244))::abs < 1000 else true)
+message "DNB check DNB_0031 failed. Formula used: if {r910} = 1 then {r930} = {r940}"
+
+@name("DNB Consistency Plausibility check: DNB_0031_6")
+@description("DNB Consistency Plausibility check: DNB_0031")
+raise DNBConsistencyPlausibilityCheckDNB0031_6 severity error
+not (if $DPM_ID_118840 == 1    (($DPM_ID_51069) - ($DPM_ID_51242))::abs < 1000 else true)
+message "DNB check DNB_0031 failed. Formula used: if {r910} = 1 then {r930} = {r940}"
+
+@name("DNB Consistency Plausibility check: DNB_0031_7")
+@description("DNB Consistency Plausibility check: DNB_0031")
+raise DNBConsistencyPlausibilityCheckDNB0031_7 severity error
+not (if $DPM_ID_118860 == 1    (($DPM_ID_51073) - ($DPM_ID_51246))::abs < 1000 else true)
+message "DNB check DNB_0031 failed. Formula used: if {r910} = 1 then {r930} = {r940}"
+
+@name("DNB Consistency Plausibility check: DNB_0031_8")
+@description("DNB Consistency Plausibility check: DNB_0031")
+raise DNBConsistencyPlausibilityCheckDNB0031_8 severity error
+not (if $DPM_ID_118875 == 1    (($DPM_ID_51402) - ($DPM_ID_51422))::abs < 1000 else true)
+message "DNB check DNB_0031 failed. Formula used: if {r910} = 1 then {r930} = {r940}"
+
+@name("DNB Consistency Plausibility check: DNB_0042_1")
+@description("DNB Consistency Plausibility check: DNB_0042")
+raise DNBConsistencyPlausibilityCheckDNB0042_1 severity error
+not (if $DPM_ID_118798 <= 5    (($DPM_ID_51300) - ($DPM_ID_51200))::abs < 1000 else true)
+message "DNB check DNB_0042 failed. Formula used: if {r010} <= 5 then {r020} = {r040}"
+
+@name("DNB Consistency Plausibility check: DNB_0042_2")
+@description("DNB Consistency Plausibility check: DNB_0042")
+raise DNBConsistencyPlausibilityCheckDNB0042_2 severity error
+not (if $DPM_ID_118797 <= 5    (($DPM_ID_51299) - ($DPM_ID_51199))::abs < 1000 else true)
+message "DNB check DNB_0042 failed. Formula used: if {r010} <= 5 then {r020} = {r040}"
+
+@name("DNB Consistency Plausibility check: DNB_0042_3")
+@description("DNB Consistency Plausibility check: DNB_0042")
+raise DNBConsistencyPlausibilityCheckDNB0042_3 severity error
+not (if $DPM_ID_118795 <= 5    (($DPM_ID_51297) - ($DPM_ID_51197))::abs < 1000 else true)
+message "DNB check DNB_0042 failed. Formula used: if {r010} <= 5 then {r020} = {r040}"
+
+@name("DNB Consistency Plausibility check: DNB_0042_4")
+@description("DNB Consistency Plausibility check: DNB_0042")
+raise DNBConsistencyPlausibilityCheckDNB0042_4 severity error
+not (if $DPM_ID_118793 <= 5    (($DPM_ID_51295) - ($DPM_ID_51195))::abs < 1000 else true)
+message "DNB check DNB_0042 failed. Formula used: if {r010} <= 5 then {r020} = {r040}"
+
+@name("DNB Consistency Plausibility check: DNB_0042_5")
+@description("DNB Consistency Plausibility check: DNB_0042")
+raise DNBConsistencyPlausibilityCheckDNB0042_5 severity error
+not (if $DPM_ID_118794 <= 5    (($DPM_ID_51296) - ($DPM_ID_51196))::abs < 1000 else true)
+message "DNB check DNB_0042 failed. Formula used: if {r010} <= 5 then {r020} = {r040}"
+
+@name("DNB Consistency Plausibility check: DNB_0042_6")
+@description("DNB Consistency Plausibility check: DNB_0042")
+raise DNBConsistencyPlausibilityCheckDNB0042_6 severity error
+not (if $DPM_ID_118792 <= 5    (($DPM_ID_51294) - ($DPM_ID_51194))::abs < 1000 else true)
+message "DNB check DNB_0042 failed. Formula used: if {r010} <= 5 then {r020} = {r040}"
+
+@name("DNB Consistency Plausibility check: DNB_0042_7")
+@description("DNB Consistency Plausibility check: DNB_0042")
+raise DNBConsistencyPlausibilityCheckDNB0042_7 severity error
+not (if $DPM_ID_118796 <= 5    (($DPM_ID_51298) - ($DPM_ID_51198))::abs < 1000 else true)
+message "DNB check DNB_0042 failed. Formula used: if {r010} <= 5 then {r020} = {r040}"
+
+@name("DNB Consistency Plausibility check: DNB_0042_8")
+@description("DNB Consistency Plausibility check: DNB_0042")
+raise DNBConsistencyPlausibilityCheckDNB0042_8 severity error
+not (if $DPM_ID_118799 <= 5    (($DPM_ID_51426) - ($DPM_ID_51416))::abs < 1000 else true)
+message "DNB check DNB_0042 failed. Formula used: if {r010} <= 5 then {r020} = {r040}"
+
+@name("DNB Consistency Plausibility check: DNB_0043_1")
+@description("DNB Consistency Plausibility check: DNB_0043")
+raise DNBConsistencyPlausibilityCheckDNB0043_1 severity error
+not (if $DPM_ID_118838 <= 5    (($DPM_ID_51340) - ($DPM_ID_51240))::abs < 1000  else true)
+message "DNB check DNB_0043 failed. Formula used: if {r110} <= 5 then {r120} = {r140} "
+
+@name("DNB Consistency Plausibility check: DNB_0043_2")
+@description("DNB Consistency Plausibility check: DNB_0043")
+raise DNBConsistencyPlausibilityCheckDNB0043_2 severity error
+not (if $DPM_ID_118837 <= 5    (($DPM_ID_51339) - ($DPM_ID_51239))::abs < 1000  else true)
+message "DNB check DNB_0043 failed. Formula used: if {r110} <= 5 then {r120} = {r140} "
+
+@name("DNB Consistency Plausibility check: DNB_0043_3")
+@description("DNB Consistency Plausibility check: DNB_0043")
+raise DNBConsistencyPlausibilityCheckDNB0043_3 severity error
+not (if $DPM_ID_118835 <= 5    (($DPM_ID_51337) - ($DPM_ID_51237))::abs < 1000  else true)
+message "DNB check DNB_0043 failed. Formula used: if {r110} <= 5 then {r120} = {r140} "
+
+@name("DNB Consistency Plausibility check: DNB_0043_4")
+@description("DNB Consistency Plausibility check: DNB_0043")
+raise DNBConsistencyPlausibilityCheckDNB0043_4 severity error
+not (if $DPM_ID_118833 <= 5    (($DPM_ID_51335) - ($DPM_ID_51235))::abs < 1000  else true)
+message "DNB check DNB_0043 failed. Formula used: if {r110} <= 5 then {r120} = {r140} "
+
+@name("DNB Consistency Plausibility check: DNB_0043_5")
+@description("DNB Consistency Plausibility check: DNB_0043")
+raise DNBConsistencyPlausibilityCheckDNB0043_5 severity error
+not (if $DPM_ID_118834 <= 5    (($DPM_ID_51336) - ($DPM_ID_51236))::abs < 1000  else true)
+message "DNB check DNB_0043 failed. Formula used: if {r110} <= 5 then {r120} = {r140} "
+
+@name("DNB Consistency Plausibility check: DNB_0043_6")
+@description("DNB Consistency Plausibility check: DNB_0043")
+raise DNBConsistencyPlausibilityCheckDNB0043_6 severity error
+not (if $DPM_ID_118832 <= 5    (($DPM_ID_51334) - ($DPM_ID_51234))::abs < 1000  else true)
+message "DNB check DNB_0043 failed. Formula used: if {r110} <= 5 then {r120} = {r140} "
+
+@name("DNB Consistency Plausibility check: DNB_0043_7")
+@description("DNB Consistency Plausibility check: DNB_0043")
+raise DNBConsistencyPlausibilityCheckDNB0043_7 severity error
+not (if $DPM_ID_118836 <= 5    (($DPM_ID_51338) - ($DPM_ID_51238))::abs < 1000  else true)
+message "DNB check DNB_0043 failed. Formula used: if {r110} <= 5 then {r120} = {r140} "
+
+@name("DNB Consistency Plausibility check: DNB_0043_8")
+@description("DNB Consistency Plausibility check: DNB_0043")
+raise DNBConsistencyPlausibilityCheckDNB0043_8 severity error
+not (if $DPM_ID_118839 <= 5    (($DPM_ID_51431) - ($DPM_ID_51421))::abs < 1000  else true)
+message "DNB check DNB_0043 failed. Formula used: if {r110} <= 5 then {r120} = {r140} "
+
+@name("DNB Consistency Plausibility check: DNB_0044_1")
+@description("DNB Consistency Plausibility check: DNB_0044")
+raise DNBConsistencyPlausibilityCheckDNB0044_1 severity error
+not (if $DPM_ID_118830 <= 5    (($DPM_ID_51332) - ($DPM_ID_51232))::abs < 1000  else true)
+message "DNB check DNB_0044 failed. Formula used: if {r210} <= 5 then {r220} = {r240} "
+
+@name("DNB Consistency Plausibility check: DNB_0044_2")
+@description("DNB Consistency Plausibility check: DNB_0044")
+raise DNBConsistencyPlausibilityCheckDNB0044_2 severity error
+not (if $DPM_ID_118829 <= 5    (($DPM_ID_51331) - ($DPM_ID_51231))::abs < 1000  else true)
+message "DNB check DNB_0044 failed. Formula used: if {r210} <= 5 then {r220} = {r240} "
+
+@name("DNB Consistency Plausibility check: DNB_0044_3")
+@description("DNB Consistency Plausibility check: DNB_0044")
+raise DNBConsistencyPlausibilityCheckDNB0044_3 severity error
+not (if $DPM_ID_118827 <= 5    (($DPM_ID_51329) - ($DPM_ID_51229))::abs < 1000  else true)
+message "DNB check DNB_0044 failed. Formula used: if {r210} <= 5 then {r220} = {r240} "
+
+@name("DNB Consistency Plausibility check: DNB_0044_4")
+@description("DNB Consistency Plausibility check: DNB_0044")
+raise DNBConsistencyPlausibilityCheckDNB0044_4 severity error
+not (if $DPM_ID_118825 <= 5    (($DPM_ID_51327) - ($DPM_ID_51227))::abs < 1000  else true)
+message "DNB check DNB_0044 failed. Formula used: if {r210} <= 5 then {r220} = {r240} "
+
+@name("DNB Consistency Plausibility check: DNB_0044_5")
+@description("DNB Consistency Plausibility check: DNB_0044")
+raise DNBConsistencyPlausibilityCheckDNB0044_5 severity error
+not (if $DPM_ID_118826 <= 5    (($DPM_ID_51328) - ($DPM_ID_51228))::abs < 1000  else true)
+message "DNB check DNB_0044 failed. Formula used: if {r210} <= 5 then {r220} = {r240} "
+
+@name("DNB Consistency Plausibility check: DNB_0044_6")
+@description("DNB Consistency Plausibility check: DNB_0044")
+raise DNBConsistencyPlausibilityCheckDNB0044_6 severity error
+not (if $DPM_ID_118824 <= 5    (($DPM_ID_51326) - ($DPM_ID_51226))::abs < 1000  else true)
+message "DNB check DNB_0044 failed. Formula used: if {r210} <= 5 then {r220} = {r240} "
+
+@name("DNB Consistency Plausibility check: DNB_0044_7")
+@description("DNB Consistency Plausibility check: DNB_0044")
+raise DNBConsistencyPlausibilityCheckDNB0044_7 severity error
+not (if $DPM_ID_118828 <= 5    (($DPM_ID_51330) - ($DPM_ID_51230))::abs < 1000  else true)
+message "DNB check DNB_0044 failed. Formula used: if {r210} <= 5 then {r220} = {r240} "
+
+@name("DNB Consistency Plausibility check: DNB_0044_8")
+@description("DNB Consistency Plausibility check: DNB_0044")
+raise DNBConsistencyPlausibilityCheckDNB0044_8 severity error
+not (if $DPM_ID_118831 <= 5    (($DPM_ID_51430) - ($DPM_ID_51420))::abs < 1000  else true)
+message "DNB check DNB_0044 failed. Formula used: if {r210} <= 5 then {r220} = {r240} "
+
+@name("DNB Consistency Plausibility check: DNB_0045_1")
+@description("DNB Consistency Plausibility check: DNB_0045")
+raise DNBConsistencyPlausibilityCheckDNB0045_1 severity error
+not (if $DPM_ID_118790 <= 5    (($DPM_ID_51292) - ($DPM_ID_51192))::abs < 1000  else true)
+message "DNB check DNB_0045 failed. Formula used: if {r310} <= 5 then {r320} = {r340} "
+
+@name("DNB Consistency Plausibility check: DNB_0045_2")
+@description("DNB Consistency Plausibility check: DNB_0045")
+raise DNBConsistencyPlausibilityCheckDNB0045_2 severity error
+not (if $DPM_ID_118789 <= 5    (($DPM_ID_51291) - ($DPM_ID_51191))::abs < 1000  else true)
+message "DNB check DNB_0045 failed. Formula used: if {r310} <= 5 then {r320} = {r340} "
+
+@name("DNB Consistency Plausibility check: DNB_0045_3")
+@description("DNB Consistency Plausibility check: DNB_0045")
+raise DNBConsistencyPlausibilityCheckDNB0045_3 severity error
+not (if $DPM_ID_118787 <= 5    (($DPM_ID_51289) - ($DPM_ID_51189))::abs < 1000  else true)
+message "DNB check DNB_0045 failed. Formula used: if {r310} <= 5 then {r320} = {r340} "
+
+@name("DNB Consistency Plausibility check: DNB_0045_4")
+@description("DNB Consistency Plausibility check: DNB_0045")
+raise DNBConsistencyPlausibilityCheckDNB0045_4 severity error
+not (if $DPM_ID_118785 <= 5    (($DPM_ID_51287) - ($DPM_ID_51187))::abs < 1000  else true)
+message "DNB check DNB_0045 failed. Formula used: if {r310} <= 5 then {r320} = {r340} "
+
+@name("DNB Consistency Plausibility check: DNB_0045_5")
+@description("DNB Consistency Plausibility check: DNB_0045")
+raise DNBConsistencyPlausibilityCheckDNB0045_5 severity error
+not (if $DPM_ID_118786 <= 5    (($DPM_ID_51288) - ($DPM_ID_51188))::abs < 1000  else true)
+message "DNB check DNB_0045 failed. Formula used: if {r310} <= 5 then {r320} = {r340} "
+
+@name("DNB Consistency Plausibility check: DNB_0045_6")
+@description("DNB Consistency Plausibility check: DNB_0045")
+raise DNBConsistencyPlausibilityCheckDNB0045_6 severity error
+not (if $DPM_ID_118784 <= 5    (($DPM_ID_51286) - ($DPM_ID_51186))::abs < 1000  else true)
+message "DNB check DNB_0045 failed. Formula used: if {r310} <= 5 then {r320} = {r340} "
+
+@name("DNB Consistency Plausibility check: DNB_0045_7")
+@description("DNB Consistency Plausibility check: DNB_0045")
+raise DNBConsistencyPlausibilityCheckDNB0045_7 severity error
+not (if $DPM_ID_118788 <= 5    (($DPM_ID_51290) - ($DPM_ID_51190))::abs < 1000  else true)
+message "DNB check DNB_0045 failed. Formula used: if {r310} <= 5 then {r320} = {r340} "
+
+@name("DNB Consistency Plausibility check: DNB_0045_8")
+@description("DNB Consistency Plausibility check: DNB_0045")
+raise DNBConsistencyPlausibilityCheckDNB0045_8 severity error
+not (if $DPM_ID_118791 <= 5    (($DPM_ID_51425) - ($DPM_ID_51415))::abs < 1000  else true)
+message "DNB check DNB_0045 failed. Formula used: if {r310} <= 5 then {r320} = {r340} "
+
+@name("DNB Consistency Plausibility check: DNB_0046_1")
+@description("DNB Consistency Plausibility check: DNB_0046")
+raise DNBConsistencyPlausibilityCheckDNB0046_1 severity error
+not (if $DPM_ID_118822 <= 5    (($DPM_ID_51324) - ($DPM_ID_51224))::abs < 1000  else true)
+message "DNB check DNB_0046 failed. Formula used: if {r410} <= 5 then {r420} = {r440} "
+
+@name("DNB Consistency Plausibility check: DNB_0046_2")
+@description("DNB Consistency Plausibility check: DNB_0046")
+raise DNBConsistencyPlausibilityCheckDNB0046_2 severity error
+not (if $DPM_ID_118821 <= 5    (($DPM_ID_51323) - ($DPM_ID_51223))::abs < 1000  else true)
+message "DNB check DNB_0046 failed. Formula used: if {r410} <= 5 then {r420} = {r440} "
+
+@name("DNB Consistency Plausibility check: DNB_0046_3")
+@description("DNB Consistency Plausibility check: DNB_0046")
+raise DNBConsistencyPlausibilityCheckDNB0046_3 severity error
+not (if $DPM_ID_118819 <= 5    (($DPM_ID_51321) - ($DPM_ID_51221))::abs < 1000  else true)
+message "DNB check DNB_0046 failed. Formula used: if {r410} <= 5 then {r420} = {r440} "
+
+@name("DNB Consistency Plausibility check: DNB_0046_4")
+@description("DNB Consistency Plausibility check: DNB_0046")
+raise DNBConsistencyPlausibilityCheckDNB0046_4 severity error
+not (if $DPM_ID_118817 <= 5    (($DPM_ID_51319) - ($DPM_ID_51219))::abs < 1000  else true)
+message "DNB check DNB_0046 failed. Formula used: if {r410} <= 5 then {r420} = {r440} "
+
+@name("DNB Consistency Plausibility check: DNB_0046_5")
+@description("DNB Consistency Plausibility check: DNB_0046")
+raise DNBConsistencyPlausibilityCheckDNB0046_5 severity error
+not (if $DPM_ID_118818 <= 5    (($DPM_ID_51320) - ($DPM_ID_51220))::abs < 1000  else true)
+message "DNB check DNB_0046 failed. Formula used: if {r410} <= 5 then {r420} = {r440} "
+
+@name("DNB Consistency Plausibility check: DNB_0046_6")
+@description("DNB Consistency Plausibility check: DNB_0046")
+raise DNBConsistencyPlausibilityCheckDNB0046_6 severity error
+not (if $DPM_ID_118816 <= 5    (($DPM_ID_51318) - ($DPM_ID_51218))::abs < 1000  else true)
+message "DNB check DNB_0046 failed. Formula used: if {r410} <= 5 then {r420} = {r440} "
+
+@name("DNB Consistency Plausibility check: DNB_0046_7")
+@description("DNB Consistency Plausibility check: DNB_0046")
+raise DNBConsistencyPlausibilityCheckDNB0046_7 severity error
+not (if $DPM_ID_118820 <= 5    (($DPM_ID_51322) - ($DPM_ID_51222))::abs < 1000  else true)
+message "DNB check DNB_0046 failed. Formula used: if {r410} <= 5 then {r420} = {r440} "
+
+@name("DNB Consistency Plausibility check: DNB_0046_8")
+@description("DNB Consistency Plausibility check: DNB_0046")
+raise DNBConsistencyPlausibilityCheckDNB0046_8 severity error
+not (if $DPM_ID_118823 <= 5    (($DPM_ID_51429) - ($DPM_ID_51419))::abs < 1000  else true)
+message "DNB check DNB_0046 failed. Formula used: if {r410} <= 5 then {r420} = {r440} "
+
+@name("DNB Consistency Plausibility check: DNB_0047_1")
+@description("DNB Consistency Plausibility check: DNB_0047")
+raise DNBConsistencyPlausibilityCheckDNB0047_1 severity error
+not (if $DPM_ID_118814 <= 5    (($DPM_ID_51316) - ($DPM_ID_51216))::abs < 1000  else true)
+message "DNB check DNB_0047 failed. Formula used: if {r510} <= 5 then {r520} = {r540} "
+
+@name("DNB Consistency Plausibility check: DNB_0047_2")
+@description("DNB Consistency Plausibility check: DNB_0047")
+raise DNBConsistencyPlausibilityCheckDNB0047_2 severity error
+not (if $DPM_ID_118813 <= 5    (($DPM_ID_51315) - ($DPM_ID_51215))::abs < 1000  else true)
+message "DNB check DNB_0047 failed. Formula used: if {r510} <= 5 then {r520} = {r540} "
+
+@name("DNB Consistency Plausibility check: DNB_0047_3")
+@description("DNB Consistency Plausibility check: DNB_0047")
+raise DNBConsistencyPlausibilityCheckDNB0047_3 severity error
+not (if $DPM_ID_118811 <= 5    (($DPM_ID_51313) - ($DPM_ID_51213))::abs < 1000  else true)
+message "DNB check DNB_0047 failed. Formula used: if {r510} <= 5 then {r520} = {r540} "
+
+@name("DNB Consistency Plausibility check: DNB_0047_4")
+@description("DNB Consistency Plausibility check: DNB_0047")
+raise DNBConsistencyPlausibilityCheckDNB0047_4 severity error
+not (if $DPM_ID_118809 <= 5    (($DPM_ID_51311) - ($DPM_ID_51211))::abs < 1000  else true)
+message "DNB check DNB_0047 failed. Formula used: if {r510} <= 5 then {r520} = {r540} "
+
+@name("DNB Consistency Plausibility check: DNB_0047_5")
+@description("DNB Consistency Plausibility check: DNB_0047")
+raise DNBConsistencyPlausibilityCheckDNB0047_5 severity error
+not (if $DPM_ID_118810 <= 5    (($DPM_ID_51312) - ($DPM_ID_51212))::abs < 1000  else true)
+message "DNB check DNB_0047 failed. Formula used: if {r510} <= 5 then {r520} = {r540} "
+
+@name("DNB Consistency Plausibility check: DNB_0047_6")
+@description("DNB Consistency Plausibility check: DNB_0047")
+raise DNBConsistencyPlausibilityCheckDNB0047_6 severity error
+not (if $DPM_ID_118808 <= 5    (($DPM_ID_51310) - ($DPM_ID_51210))::abs < 1000  else true)
+message "DNB check DNB_0047 failed. Formula used: if {r510} <= 5 then {r520} = {r540} "
+
+@name("DNB Consistency Plausibility check: DNB_0047_7")
+@description("DNB Consistency Plausibility check: DNB_0047")
+raise DNBConsistencyPlausibilityCheckDNB0047_7 severity error
+not (if $DPM_ID_118812 <= 5    (($DPM_ID_51314) - ($DPM_ID_51214))::abs < 1000  else true)
+message "DNB check DNB_0047 failed. Formula used: if {r510} <= 5 then {r520} = {r540} "
+
+@name("DNB Consistency Plausibility check: DNB_0047_8")
+@description("DNB Consistency Plausibility check: DNB_0047")
+raise DNBConsistencyPlausibilityCheckDNB0047_8 severity error
+not (if $DPM_ID_118815 <= 5    (($DPM_ID_51428) - ($DPM_ID_51418))::abs < 1000  else true)
+message "DNB check DNB_0047 failed. Formula used: if {r510} <= 5 then {r520} = {r540} "
+
+@name("DNB Consistency Plausibility check: DNB_0048_1")
+@description("DNB Consistency Plausibility check: DNB_0048")
+raise DNBConsistencyPlausibilityCheckDNB0048_1 severity error
+not (if $DPM_ID_118774 <= 5    (($DPM_ID_51276) - ($DPM_ID_51176))::abs < 1000  else true)
+message "DNB check DNB_0048 failed. Formula used: if {r610} <= 5 then {r620} = {r640} "
+
+@name("DNB Consistency Plausibility check: DNB_0048_2")
+@description("DNB Consistency Plausibility check: DNB_0048")
+raise DNBConsistencyPlausibilityCheckDNB0048_2 severity error
+not (if $DPM_ID_118773 <= 5    (($DPM_ID_51275) - ($DPM_ID_51175))::abs < 1000  else true)
+message "DNB check DNB_0048 failed. Formula used: if {r610} <= 5 then {r620} = {r640} "
+
+@name("DNB Consistency Plausibility check: DNB_0048_3")
+@description("DNB Consistency Plausibility check: DNB_0048")
+raise DNBConsistencyPlausibilityCheckDNB0048_3 severity error
+not (if $DPM_ID_118771 <= 5    (($DPM_ID_51273) - ($DPM_ID_51173))::abs < 1000  else true)
+message "DNB check DNB_0048 failed. Formula used: if {r610} <= 5 then {r620} = {r640} "
+
+@name("DNB Consistency Plausibility check: DNB_0048_4")
+@description("DNB Consistency Plausibility check: DNB_0048")
+raise DNBConsistencyPlausibilityCheckDNB0048_4 severity error
+not (if $DPM_ID_118769 <= 5    (($DPM_ID_51271) - ($DPM_ID_51171))::abs < 1000  else true)
+message "DNB check DNB_0048 failed. Formula used: if {r610} <= 5 then {r620} = {r640} "
+
+@name("DNB Consistency Plausibility check: DNB_0048_5")
+@description("DNB Consistency Plausibility check: DNB_0048")
+raise DNBConsistencyPlausibilityCheckDNB0048_5 severity error
+not (if $DPM_ID_118770 <= 5    (($DPM_ID_51272) - ($DPM_ID_51172))::abs < 1000  else true)
+message "DNB check DNB_0048 failed. Formula used: if {r610} <= 5 then {r620} = {r640} "
+
+@name("DNB Consistency Plausibility check: DNB_0048_6")
+@description("DNB Consistency Plausibility check: DNB_0048")
+raise DNBConsistencyPlausibilityCheckDNB0048_6 severity error
+not (if $DPM_ID_118768 <= 5    (($DPM_ID_51270) - ($DPM_ID_51170))::abs < 1000  else true)
+message "DNB check DNB_0048 failed. Formula used: if {r610} <= 5 then {r620} = {r640} "
+
+@name("DNB Consistency Plausibility check: DNB_0048_7")
+@description("DNB Consistency Plausibility check: DNB_0048")
+raise DNBConsistencyPlausibilityCheckDNB0048_7 severity error
+not (if $DPM_ID_118772 <= 5    (($DPM_ID_51274) - ($DPM_ID_51174))::abs < 1000  else true)
+message "DNB check DNB_0048 failed. Formula used: if {r610} <= 5 then {r620} = {r640} "
+
+@name("DNB Consistency Plausibility check: DNB_0048_8")
+@description("DNB Consistency Plausibility check: DNB_0048")
+raise DNBConsistencyPlausibilityCheckDNB0048_8 severity error
+not (if $DPM_ID_118775 <= 5    (($DPM_ID_51423) - ($DPM_ID_51413))::abs < 1000  else true)
+message "DNB check DNB_0048 failed. Formula used: if {r610} <= 5 then {r620} = {r640} "
+
+@name("DNB Consistency Plausibility check: DNB_0049_1")
+@description("DNB Consistency Plausibility check: DNB_0049")
+raise DNBConsistencyPlausibilityCheckDNB0049_1 severity error
+not (if $DPM_ID_118782 <= 5    (($DPM_ID_51284) - ($DPM_ID_51184))::abs < 1000  else true)
+message "DNB check DNB_0049 failed. Formula used: if {r710} <= 5 then {r720} = {r740} "
+
+@name("DNB Consistency Plausibility check: DNB_0049_2")
+@description("DNB Consistency Plausibility check: DNB_0049")
+raise DNBConsistencyPlausibilityCheckDNB0049_2 severity error
+not (if $DPM_ID_118781 <= 5    (($DPM_ID_51283) - ($DPM_ID_51183))::abs < 1000  else true)
+message "DNB check DNB_0049 failed. Formula used: if {r710} <= 5 then {r720} = {r740} "
+
+@name("DNB Consistency Plausibility check: DNB_0049_3")
+@description("DNB Consistency Plausibility check: DNB_0049")
+raise DNBConsistencyPlausibilityCheckDNB0049_3 severity error
+not (if $DPM_ID_118779 <= 5    (($DPM_ID_51281) - ($DPM_ID_51181))::abs < 1000  else true)
+message "DNB check DNB_0049 failed. Formula used: if {r710} <= 5 then {r720} = {r740} "
+
+@name("DNB Consistency Plausibility check: DNB_0049_4")
+@description("DNB Consistency Plausibility check: DNB_0049")
+raise DNBConsistencyPlausibilityCheckDNB0049_4 severity error
+not (if $DPM_ID_118777 <= 5    (($DPM_ID_51279) - ($DPM_ID_51179))::abs < 1000  else true)
+message "DNB check DNB_0049 failed. Formula used: if {r710} <= 5 then {r720} = {r740} "
+
+@name("DNB Consistency Plausibility check: DNB_0049_5")
+@description("DNB Consistency Plausibility check: DNB_0049")
+raise DNBConsistencyPlausibilityCheckDNB0049_5 severity error
+not (if $DPM_ID_118778 <= 5    (($DPM_ID_51280) - ($DPM_ID_51180))::abs < 1000  else true)
+message "DNB check DNB_0049 failed. Formula used: if {r710} <= 5 then {r720} = {r740} "
+
+@name("DNB Consistency Plausibility check: DNB_0049_6")
+@description("DNB Consistency Plausibility check: DNB_0049")
+raise DNBConsistencyPlausibilityCheckDNB0049_6 severity error
+not (if $DPM_ID_118776 <= 5    (($DPM_ID_51278) - ($DPM_ID_51178))::abs < 1000  else true)
+message "DNB check DNB_0049 failed. Formula used: if {r710} <= 5 then {r720} = {r740} "
+
+@name("DNB Consistency Plausibility check: DNB_0049_7")
+@description("DNB Consistency Plausibility check: DNB_0049")
+raise DNBConsistencyPlausibilityCheckDNB0049_7 severity error
+not (if $DPM_ID_118780 <= 5    (($DPM_ID_51282) - ($DPM_ID_51182))::abs < 1000  else true)
+message "DNB check DNB_0049 failed. Formula used: if {r710} <= 5 then {r720} = {r740} "
+
+@name("DNB Consistency Plausibility check: DNB_0049_8")
+@description("DNB Consistency Plausibility check: DNB_0049")
+raise DNBConsistencyPlausibilityCheckDNB0049_8 severity error
+not (if $DPM_ID_118783 <= 5    (($DPM_ID_51424) - ($DPM_ID_51414))::abs < 1000  else true)
+message "DNB check DNB_0049 failed. Formula used: if {r710} <= 5 then {r720} = {r740} "
+
+@name("DNB Consistency Plausibility check: DNB_0050_1")
+@description("DNB Consistency Plausibility check: DNB_0050")
+raise DNBConsistencyPlausibilityCheckDNB0050_1 severity error
+not (if $DPM_ID_118806 <= 5    (($DPM_ID_51308) - ($DPM_ID_51208))::abs < 1000  else true)
+message "DNB check DNB_0050 failed. Formula used: if {r810} <= 5 then {r820} = {r840} "
+
+@name("DNB Consistency Plausibility check: DNB_0050_2")
+@description("DNB Consistency Plausibility check: DNB_0050")
+raise DNBConsistencyPlausibilityCheckDNB0050_2 severity error
+not (if $DPM_ID_118805 <= 5    (($DPM_ID_51307) - ($DPM_ID_51207))::abs < 1000  else true)
+message "DNB check DNB_0050 failed. Formula used: if {r810} <= 5 then {r820} = {r840} "
+
+@name("DNB Consistency Plausibility check: DNB_0050_3")
+@description("DNB Consistency Plausibility check: DNB_0050")
+raise DNBConsistencyPlausibilityCheckDNB0050_3 severity error
+not (if $DPM_ID_118803 <= 5    (($DPM_ID_51305) - ($DPM_ID_51205))::abs < 1000  else true)
+message "DNB check DNB_0050 failed. Formula used: if {r810} <= 5 then {r820} = {r840} "
+
+@name("DNB Consistency Plausibility check: DNB_0050_4")
+@description("DNB Consistency Plausibility check: DNB_0050")
+raise DNBConsistencyPlausibilityCheckDNB0050_4 severity error
+not (if $DPM_ID_118801 <= 5    (($DPM_ID_51303) - ($DPM_ID_51203))::abs < 1000  else true)
+message "DNB check DNB_0050 failed. Formula used: if {r810} <= 5 then {r820} = {r840} "
+
+@name("DNB Consistency Plausibility check: DNB_0050_5")
+@description("DNB Consistency Plausibility check: DNB_0050")
+raise DNBConsistencyPlausibilityCheckDNB0050_5 severity error
+not (if $DPM_ID_118802 <= 5    (($DPM_ID_51304) - ($DPM_ID_51204))::abs < 1000  else true)
+message "DNB check DNB_0050 failed. Formula used: if {r810} <= 5 then {r820} = {r840} "
+
+@name("DNB Consistency Plausibility check: DNB_0050_6")
+@description("DNB Consistency Plausibility check: DNB_0050")
+raise DNBConsistencyPlausibilityCheckDNB0050_6 severity error
+not (if $DPM_ID_118800 <= 5    (($DPM_ID_51302) - ($DPM_ID_51202))::abs < 1000  else true)
+message "DNB check DNB_0050 failed. Formula used: if {r810} <= 5 then {r820} = {r840} "
+
+@name("DNB Consistency Plausibility check: DNB_0050_7")
+@description("DNB Consistency Plausibility check: DNB_0050")
+raise DNBConsistencyPlausibilityCheckDNB0050_7 severity error
+not (if $DPM_ID_118804 <= 5    (($DPM_ID_51306) - ($DPM_ID_51206))::abs < 1000  else true)
+message "DNB check DNB_0050 failed. Formula used: if {r810} <= 5 then {r820} = {r840} "
+
+@name("DNB Consistency Plausibility check: DNB_0050_8")
+@description("DNB Consistency Plausibility check: DNB_0050")
+raise DNBConsistencyPlausibilityCheckDNB0050_8 severity error
+not (if $DPM_ID_118807 <= 5    (($DPM_ID_51427) - ($DPM_ID_51417))::abs < 1000  else true)
+message "DNB check DNB_0050 failed. Formula used: if {r810} <= 5 then {r820} = {r840} "
+
+@name("DNB Consistency Plausibility check: DNB_0051_1")
+@description("DNB Consistency Plausibility check: DNB_0051")
+raise DNBConsistencyPlausibilityCheckDNB0051_1 severity error
+not (if $DPM_ID_118870 <= 5    (($DPM_ID_51348) - ($DPM_ID_51248))::abs < 1000  else true)
+message "DNB check DNB_0051 failed. Formula used: if {r910} <= 5 then {r920} = {r940} "
+
+@name("DNB Consistency Plausibility check: DNB_0051_2")
+@description("DNB Consistency Plausibility check: DNB_0051")
+raise DNBConsistencyPlausibilityCheckDNB0051_2 severity error
+not (if $DPM_ID_118865 <= 5    (($DPM_ID_51347) - ($DPM_ID_51247))::abs < 1000  else true)
+message "DNB check DNB_0051 failed. Formula used: if {r910} <= 5 then {r920} = {r940} "
+
+@name("DNB Consistency Plausibility check: DNB_0051_3")
+@description("DNB Consistency Plausibility check: DNB_0051")
+raise DNBConsistencyPlausibilityCheckDNB0051_3 severity error
+not (if $DPM_ID_118855 <= 5    (($DPM_ID_51345) - ($DPM_ID_51245))::abs < 1000  else true)
+message "DNB check DNB_0051 failed. Formula used: if {r910} <= 5 then {r920} = {r940} "
+
+@name("DNB Consistency Plausibility check: DNB_0051_4")
+@description("DNB Consistency Plausibility check: DNB_0051")
+raise DNBConsistencyPlausibilityCheckDNB0051_4 severity error
+not (if $DPM_ID_118845 <= 5    (($DPM_ID_51343) - ($DPM_ID_51243))::abs < 1000  else true)
+message "DNB check DNB_0051 failed. Formula used: if {r910} <= 5 then {r920} = {r940} "
+
+@name("DNB Consistency Plausibility check: DNB_0051_5")
+@description("DNB Consistency Plausibility check: DNB_0051")
+raise DNBConsistencyPlausibilityCheckDNB0051_5 severity error
+not (if $DPM_ID_118850 <= 5    (($DPM_ID_51344) - ($DPM_ID_51244))::abs < 1000  else true)
+message "DNB check DNB_0051 failed. Formula used: if {r910} <= 5 then {r920} = {r940} "
+
+@name("DNB Consistency Plausibility check: DNB_0051_6")
+@description("DNB Consistency Plausibility check: DNB_0051")
+raise DNBConsistencyPlausibilityCheckDNB0051_6 severity error
+not (if $DPM_ID_118840 <= 5    (($DPM_ID_51342) - ($DPM_ID_51242))::abs < 1000  else true)
+message "DNB check DNB_0051 failed. Formula used: if {r910} <= 5 then {r920} = {r940} "
+
+@name("DNB Consistency Plausibility check: DNB_0051_7")
+@description("DNB Consistency Plausibility check: DNB_0051")
+raise DNBConsistencyPlausibilityCheckDNB0051_7 severity error
+not (if $DPM_ID_118860 <= 5    (($DPM_ID_51346) - ($DPM_ID_51246))::abs < 1000  else true)
+message "DNB check DNB_0051 failed. Formula used: if {r910} <= 5 then {r920} = {r940} "
+
+@name("DNB Consistency Plausibility check: DNB_0051_8")
+@description("DNB Consistency Plausibility check: DNB_0051")
+raise DNBConsistencyPlausibilityCheckDNB0051_8 severity error
+not (if $DPM_ID_118875 <= 5    (($DPM_ID_51432) - ($DPM_ID_51422))::abs < 1000  else true)
+message "DNB check DNB_0051 failed. Formula used: if {r910} <= 5 then {r920} = {r940} "
+
+@name("DNB Consistency Plausibility check: DNB_0123")
+@description("DNB Consistency Plausibility check: DNB_0123")
+raise DNBConsistencyPlausibilityCheckDNB0123 severity error
+not ((($DPM_ID_82115) - ($DPM_ID_82113 * $DPM_ID_81291/($DPM_ID_81291 + $DPM_ID_81292) + $DPM_ID_82114 * $DPM_ID_81292/($DPM_ID_81291 + $DPM_ID_81292)))::abs < 1000)
+message "DNB check DNB_0123 failed. Formula used: {c 08.01.a, r010, c010, s001} = {c 08.01.a, r070, c010, s001} * {c 08.01.a, r070, c110, s001}/({c 08.01.a, r070, c110, s001} + {c 08.01.a, r180, c110, s001}) + {c 08.01.a, r180, c010, s001} * {c 08.01.a, r180, c110, s001}/({c 08.01.a, r070, c110, s001} + {c 08.01.a, r180, c110, s001})"
+
+@name("DNB Consistency Plausibility check: DNB_0124")
+@description("DNB Consistency Plausibility check: DNB_0124")
+raise DNBConsistencyPlausibilityCheckDNB0124 severity error
+not ((($DPM_ID_81539) - ($DPM_ID_81537 * $DPM_ID_81291/($DPM_ID_81291 + $DPM_ID_81292) + $DPM_ID_81538 * $DPM_ID_81292/($DPM_ID_81291 + $DPM_ID_81292)))::abs < 1000)
+message "DNB check DNB_0124 failed. Formula used: {c 08.01.a, r010, c230, s001} = {c 08.01.a, r070, c230, s001} * {c 08.01.a, r070, c110, s001}/({c 08.01.a, r070, c110, s001} + {c 08.01.a, r180, c110, s001}) + {c 08.01.a, r180, c230, s001} * {c 08.01.a, r180, c110, s001}/({c 08.01.a, r070, c110, s001} + {c 08.01.a, r180, c110, s001})"
+
+@name("DNB Consistency Plausibility check: DNB_0125")
+@description("DNB Consistency Plausibility check: DNB_0125")
+raise DNBConsistencyPlausibilityCheckDNB0125 severity error
+not ((($DPM_ID_81641) - ($DPM_ID_81639 * $DPM_ID_81291/($DPM_ID_81291 + $DPM_ID_81292) + $DPM_ID_81640 * $DPM_ID_81292/($DPM_ID_81291 + $DPM_ID_81292)))::abs < 1000)
+message "DNB check DNB_0125 failed. Formula used: {c 08.01.a, r010, c250, s001} = {c 08.01.a, r070, c250, s001} * {c 08.01.a, r070, c110, s001}/({c 08.01.a, r070, c110, s001} + {c 08.01.a, r180, c110, s001}) + {c 08.01.a, r180, c250, s001} * {c 08.01.a, r180, c110, s001}/({c 08.01.a, r070, c110, s001} + {c 08.01.a, r180, c110, s001})"
+
+@name("DNB Consistency Plausibility check: DNB_0193")
+@description("DNB Consistency Plausibility check: DNB_0193")
+raise DNBConsistencyPlausibilityCheckDNB0193 severity error
+not ((($DPM_ID_49825) - ((max(($DPM_ID_49812 * 0.18 + $DPM_ID_49824 * 0.18 + $DPM_ID_49821 * 0.12 + ($DPM_ID_49809 + $DPM_ID_49634 ) * 0.15 + ($DPM_ID_49818 + $DPM_ID_49637) * 0.12 + $DPM_ID_49815 * 0.18 + $DPM_ID_49803 * 0.15 + $DPM_ID_49806 * 0.12), 0) + max(($DPM_ID_49811 * 0.18 + $DPM_ID_49823 * 0.18 + $DPM_ID_49820 * 0.12 + ($DPM_ID_49808 + $DPM_ID_49633 ) * 0.15 + ($DPM_ID_49817 + $DPM_ID_49636 ) * 0.12 + $DPM_ID_49814 * 0.18 + $DPM_ID_49802 * 0.15 + $DPM_ID_49805 * 0.12), 0) + max(($DPM_ID_49810 * 0.18 + $DPM_ID_49822 * 0.18 + $DPM_ID_49819 * 0.12 + ($DPM_ID_49807 + $DPM_ID_49632 ) * 0.15 + ($DPM_ID_49816 + $DPM_ID_49635 ) * 0.12 + $DPM_ID_49813 * 0.18 + $DPM_ID_49801 * 0.15 + $DPM_ID_49804 * 0.12), 0)) /3))::abs < 1000)
+message "DNB check DNB_0193 failed. Formula used: {c 16.00.a, r020, c070} = (max(({c 16.00.a, r030,c010} * 0.18 + {c 16.00.a, r040, c010} * 0.18 + {c 16.00.a, r050, c010} * 0.12 + ({c 16.00.a, r060, c010} + {c 16.00.a, r110, c010} ) * 0.15 + ({c 16.00.a, r070, c010} + {c 16.00.a, r120, c010}) * 0.12 + {c 16.00.a, r080, c010} * 0.18 + {c 16.00.a, r090, c010} * 0.15 + {c 16.00.a, r100, c010} * 0.12), 0) + max(({c 16.00.a, r030, c020} * 0.18 + {c 16.00.a, r040, c020} * 0.18 + {c 16.00.a, r050, c020} * 0.12 + ({c 16.00.a, r060, c020} + {c 16.00.a, r110, c020} ) * 0.15 + ({c 16.00.a, r070, c020} + {c 16.00.a, r120, c020} ) * 0.12 + {c 16.00.a, r080, c020} * 0.18 + {c 16.00.a, r090, c020} * 0.15 + {c 16.00.a, r100, c020} * 0.12), 0) + max(({c 16.00.a, r030, c030} * 0.18 + {c 16.00.a, r040, c030} * 0.18 + {c 16.00.a, r050, c030} * 0.12 + ({c 16.00.a, r060, c030} + {c 16.00.a, r110, c030} ) * 0.15 + ({c 16.00.a, r070, c030} + {c 16.00.a, r120, c030} ) * 0.12 + {c 16.00.a, r080, c030} * 0.18 + {c 16.00.a, r090, c030} * 0.15 + {c 16.00.a, r100, c030} * 0.12), 0)) /3"
+
+@name("DNB Consistency Plausibility check: DNB_0212")
+@description("DNB Consistency Plausibility check: DNB_0212")
+raise DNBConsistencyPlausibilityCheckDNB0212 severity error
+not (if $DPM_ID_41729 + $DPM_ID_41758 >= 30000000000 and (($DPM_ID_41729 + $DPM_ID_42415)/($DPM_ID_41729 + $DPM_ID_41758 + $DPM_ID_42415 + $DPM_ID_42502)) >=  0.15 and $DPM_ID_41729 + $DPM_ID_42400 + $DPM_ID_42415 != 0    $DPM_ID_42879 + $DPM_ID_110992 + $DPM_ID_110993 + $DPM_ID_110994 + $DPM_ID_42876 + $DPM_ID_42874 + $DPM_ID_42871 + $DPM_ID_42878 + $DPM_ID_42875 + $DPM_ID_110995 + $DPM_ID_110990 + $DPM_ID_110991 + $DPM_ID_110989 != 0 else true)
+message "DNB check DNB_0212 failed. Formula used: if {f 32.01, r010, c010} + {f 32.01, r010, c060} >= 30000000000 and (({f 32.01, r010, c010} + {f 32.02.a, r130, c010})/({f 32.01, r010, c010} + {f 32.01, r010, c060} + {f 32.02.a, r130, c010} + {f 32.02.a, r130, c040})) >=  0.15 and {f 32.01, r010, c010} + {f 32.02.a, r240, c010} + {f 32.02.a, r130, c010} <> 0 then {f 33.00.a, r010, c010} + {f 33.00.a, r010, c020} + {f 33.00.a, r010, c030} + {f 33.00.a, r010, c040} + {f 33.00.a, r010, c050} + {f 33.00.a, r010, c060} + {f 33.00.a, r010, c070} + {f 33.00.a, r010, c080} + {f 33.00.a, r010, c090} + {f 33.00.a, r010, c100} + {f 33.00.a, r010, c110} + {f 33.00.a, r010, c120} + {f 33.00.a, r010, c130} <> 0"
+
+@name("DNB Consistency Plausibility check: DNB_L2")
+@description("DNB Consistency Plausibility check: DNB_L2")
+raise DNBConsistencyPlausibilityCheckDNBL2 severity error
+not ((($DPM_ID_117207) - ((max(0.25*$DPM_ID_117490), min($DPM_ID_117490,150000000))))::abs < 1000)
+message "DNB check DNB_L2 failed. Formula used: {c 26.00, r020, c010} = (max(0.25*{c 04.00, r226, c010}), min({c 04.00, r226, c010},150000000))"
+

@@ -1,0 +1,131 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{83B47AD8-D3B3-453D-83D4-E0022D8D6639}</ProjectGuid>
+    <OutputType>Exe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>SphinxRulesGenerator</RootNamespace>
+    <AssemblyName>SphinxRulesGenerator</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="DocumentFormat.OpenXml, Version=2.0.5022.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>packages\DocumentFormat.OpenXml.1.0\lib\DocumentFormat.OpenXml.dll</HintPath>
+    </Reference>
+    <Reference Include="NLog, Version=4.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c, processorArchitecture=MSIL">
+      <HintPath>packages\NLog.4.3.9\lib\net40\NLog.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="SpreadsheetLight, Version=3.4.4.0, Culture=neutral, PublicKeyToken=32fbb46dc1730c57, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>packages\SpreadsheetLight.3.4.4\lib\SpreadsheetLight.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="CreateExposureMacro.cs" />
+    <Compile Include="DataHelper.cs" />
+    <Compile Include="DpmIdMappingGenerator.cs" />
+    <Compile Include="EBARulesGenerator.cs" />
+    <Compile Include="FaultConstantGenerator.cs" />
+    <Compile Include="GeneralHelper.cs" />
+    <Compile Include="Helpers\ClassHelpers.cs" />
+    <Compile Include="Helpers\CreateConstants.cs" />
+    <Compile Include="Models\Constants.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="RegexHelper.cs" />
+    <Compile Include="SphinxConstantsWriter.cs" />
+    <Compile Include="SphinxModifiedConstantGenerator.cs" />
+    <Compile Include="SphinxRulesWriter.cs" />
+    <Compile Include="Utils.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="bin\Debug\Input_DNB_Rules.txt" />
+    <Content Include="bin\Debug\Manual rules.txt" />
+    <Content Include="bin\Debug\Mapping.txt" />
+    <Content Include="bin\Debug\Mapping_2016_Q3.txt" />
+    <Content Include="bin\Debug\Mapping_2015Q2.txt" />
+    <Content Include="bin\Debug\Modified_ALG.CRDIV.Constants.txt" />
+    <Content Include="bin\Debug\SphinxRulesGenerator.exe" />
+    <Content Include="bin\Debug\SphinxRulesGenerator.pdb" />
+    <Content Include="bin\Debug\SphinxRulesGenerator.vshost.exe" />
+    <Content Include="bin\Debug\SpreadsheetLight.dll" />
+    <Content Include="lib\SpreadsheetLight.dll" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\ALG.CRDIV.Constants.xsr" />
+    <None Include="bin\Debug\Annotated Table Layout 240-FINREP 2015-B.xlsx" />
+    <None Include="bin\Debug\Annotated Table Layout 250-AE 2016-A.xlsx" />
+    <None Include="bin\Debug\Annotated Table Layout 250-COREP 2016-A.xlsx" />
+    <None Include="bin\Debug\Annotated Table Layout 250-FINREP 2016-A-Ind.xlsx" />
+    <None Include="bin\Debug\Annotated Table Layout 250-FINREP 2016-A.xlsx" />
+    <None Include="bin\Debug\Annotated Table Layout 250-FP 2016-A.xlsx" />
+    <None Include="bin\Debug\Annotated Table Layout 250-SBP 2016-A.xlsx" />
+    <None Include="bin\Debug\doit.bat" />
+    <None Include="bin\Debug\EBA rules not implemented in XBRL.xlsx" />
+    <None Include="bin\Debug\NLog.config" />
+    <None Include="bin\Debug\SphinxRulesGenerator.vshost.exe.manifest" />
+    <None Include="bin\Debug\Table Layout 240-COREP 2015-B %28Clean%29.xlsx" />
+    <None Include="bin\Debug\Validatiecontroles_2017_Q1_tcm46-356115.xlsx" />
+    <None Include="bin\Debug\Validatiecontroles_2017_Q1_tcm46-356115_2.xlsx" />
+    <None Include="bin\Debug\Updated-Validatiecontroles_2016_Q4_tcm46-351091.xlsx" />
+    <None Include="bin\Debug\Validatiecontroles_2016_Q2_updated_by_Venkat.xlsx" />
+    <Content Include="NLog.config">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <None Include="NLog.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="packages.config" />
+    <None Include="Resources\Constants.xlsx" />
+    <None Include="Resources\DPMIDS.xlsx" />
+    <None Include="Updated-Validatiecontroles_2016_Q4_tcm46-351091.xlsx" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="bin\Debug\logs\" />
+    <Folder Include="ProcessedFiles\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
