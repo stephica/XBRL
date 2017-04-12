@@ -62,7 +62,18 @@ namespace SphinxRulesGenerator
                         ProcessStartInfo StartInformation = new ProcessStartInfo();
                         StartInformation.FileName = Path.Combine(FaultConstantGenerator._rootFilePath, "ProcessedFiles");
                         Process process = Process.Start(StartInformation);
-                        process.EnableRaisingEvents = true;
+                        //process.EnableRaisingEvents = true;
+                    }
+                    //constants -m "temp.text"
+                    else if (args != null && args[1] == "-a")
+                    {
+                        List<string> allDPMIDS = FaultConstantGenerator.AllDPMIDsfromExcel();
+                        List<Constants> modifiedconstants = FaultConstantGenerator.GetModifiedConstantDefinitions(allDPMIDS);
+                        FaultConstantGenerator.WriteAllNewlyAddedConstants(modifiedconstants, args[2]);
+                        ProcessStartInfo StartInformation = new ProcessStartInfo();
+                        StartInformation.FileName = Path.Combine(FaultConstantGenerator._rootFilePath, "ProcessedFiles");
+                        Process process = Process.Start(StartInformation);
+                        //process.EnableRaisingEvents = true;
                     }
                     else
                     {

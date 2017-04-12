@@ -133,18 +133,11 @@ namespace SphinxRulesGenerator
                             Definitions = definition,
                             DPMID = dpmID
                         });
-                    }
-
-
+                    } 
                 }
 
                 foreach (var item in dpmIds)
-                {
-                    var aaaa = allconstsants.Where(x => x.DPMID == item).FirstOrDefault();
-                    if (aaaa != null)
-                    {
-
-                    }
+                { 
                     constsants.Add(allconstsants.Where(x => x.DPMID == item).FirstOrDefault());
                 }
             }
@@ -152,7 +145,7 @@ namespace SphinxRulesGenerator
             return constsants;
         }
 
-        public static void WriteAllModifiedConstants(List<Constants> modifiedDefinitions,string fileName)
+        public static void WriteAllModifiedConstants(List<Constants> modifiedDefinitions, string fileName)
         {
             //Get All Constants from Existing files
             List<string> listofAllConstants = new List<string>();
@@ -168,53 +161,66 @@ namespace SphinxRulesGenerator
 
             //constant DPM_ID_10006=eba_met:md106[ eba_dim:ALO=eba_IM:x1;eba_dim:APL=eba_PL:x4;eba_dim:BAS=eba_BA:x6;eba_dim:MCY=eba_MC:x143;unit=unit(iso4217:EUR);]
 
-            string fullFilePath = Path.Combine(_rootFilePath, "Resources", fileName);
-            using (System.IO.StreamWriter filetoWritwe = new StreamWriter(File.Open(fullFilePath, System.IO.FileMode.Append)))
+            string fullFilePath = Path.Combine(_rootFilePath, "ProcessedFiles", fileName); 
+            using (System.IO.StreamWriter filetoWritwe = new StreamWriter(File.Open(fullFilePath, System.IO.FileMode.OpenOrCreate)))
             {
-                foreach (string listItem in listofAllConstants)
+                foreach (string constant in listofAllConstants)
                 {
-                    if (listItem.StartsWith("constant DPM_ID"))
-                    {
-                        string constantID = ClassHelpers.Between(listItem, "constant ", "=eba_met");
-                        var val = modifiedDefinitions.Where(x => x.DPMID.Equals(constantID));
-                        if (val.Count() != 0)
-                        {
-                            string modifiedDefinition = modifiedDefinitions.Where(x => x.DPMID.Equals(constantID)).FirstOrDefault().Definitions;
-                            filetoWritwe.WriteLine(modifiedDefinition);
-                        }
-                        else
-                        {
-                            filetoWritwe.WriteLine(listItem);
-                        }
+                    string constantID, definition = string.Empty;
+                    switch (constant)
+                    { 
+                        case "constant DPM_ID":
+                            constantID = ClassHelpers.Between(constant, "constant ", "=eba_met");
+                            definition = modifiedDefinitions.Where(x => x.DPMID.Equals(constantID)) != null ? modifiedDefinitions.Where(x => x.DPMID.Equals(constantID)).FirstOrDefault().Definitions : constant;
+                            filetoWritwe.WriteLine(definition);
+                            break;
+                        case "macro DPM_ID":
+                            constantID = ClassHelpers.Between(constant, "macro ", "() eba_met"); 
+                            definition = modifiedDefinitions.Where(x => x.DPMID.Equals(constantID)) != null ? modifiedDefinitions.Where(x => x.DPMID.Equals(constantID)).FirstOrDefault().Definitions : constant;
+                            filetoWritwe.WriteLine(definition);
+                            break;
+                        default:
+                            filetoWritwe.WriteLine(constant);
+                            break;
 
-                    }
-                    else if (listItem.StartsWith("macro DPM_ID"))
-                    {
-                        string constantID = ClassHelpers.Between(listItem, "macro ", "() eba_met");
-                        var val = modifiedDefinitions.Where(x => x.DPMID.Equals(constantID));
-                        if (val.Count() != 0)
-                        {
-                            string modifiedDefinition = modifiedDefinitions.Where(x => x.DPMID.Equals(constantID)).FirstOrDefault().Definitions;
-                            string existingDefinition = ClassHelpers.Between(listItem.Replace("; ]", ";]"), "[", ";]");
-                            modifiedDefinition = ClassHelpers.Between(modifiedDefinition, "[", ";]");
-                            string finalItem = listItem.Replace(existingDefinition, modifiedDefinition);
-                            filetoWritwe.WriteLine(finalItem);
-                        }
-                        else
-                        {
-                            filetoWritwe.WriteLine(listItem);
-                        }
-                    }
-
-                    else
-                    {
-                        filetoWritwe.WriteLine(listItem);
-                    }
+                    } 
+                    //if (constant.StartsWith("constant DPM_ID"))
+                    //{
+                    //    string constantID = ClassHelpers.Between(constant, "constant ", "=eba_met");
+                    //    string definition = modifiedDefinitions.Where(x => x.DPMID.Equals(constantID)) != null ? modifiedDefinitions.Where(x => x.DPMID.Equals(constantID)).FirstOrDefault().Definitions : constant;
+                    //    filetoWritwe.WriteLine(definition); 
+                    //}
+                    //else if (constant.StartsWith("macro DPM_ID"))
+                    //{
+                    //    string constantID = ClassHelpers.Between(constant, "macro ", "() eba_met");
+                    //    var val = modifiedDefinitions.Where(x => x.DPMID.Equals(constantID));
+                    //    string definition = modifiedDefinitions.Where(x => x.DPMID.Equals(constantID)) != null ? modifiedDefinitions.Where(x => x.DPMID.Equals(constantID)).FirstOrDefault().Definitions : constant;
+                    //    filetoWritwe.WriteLine(definition);
+                    //} 
+                    //else
+                    //{
+                    //    filetoWritwe.WriteLine(constant);
+                        
+                    //}
                 }
 
             }
+
+
+
+            int v = count;
         }
 
-
+        public static void WriteAllNewlyAddedConstants(List<Constants> modifiedDefinitions, string fileName)
+        {
+            string fullFilePath = Path.Combine(_rootFilePath, "ProcessedFiles", fileName);
+            using (StreamWriter sw = File.AppendText(fullFilePath))
+            {
+                foreach (var item in modifiedDefinitions)
+                {
+                    sw.WriteLine(item.Definitions);
+                }
+            }
+        }
     }
 }
